@@ -1,0 +1,93 @@
+{
+  "resources" : [ {
+    "pattern" : "\\Qmail.properties\\E"
+  }, {
+    "pattern" : "\\QMETA-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/com.Anemoi.InvestorRelation.AnalystDetails.$AnalystDetailsController$Definition$Reference\\E"
+  }, {
+    "pattern" : "\\QMETA-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/com.Anemoi.InvestorRelation.BalanceSheet.$BalanceSheetDaoImpl$Definition$Reference\\E"
+  }, {
+    "pattern" : "\\QMETA-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/com.Anemoi.InvestorRelation.DataIngestion.$DataIngestionDaoImpl$Definition$Reference\\E"
+  }, {
+    "pattern" : "\\QRequestDataIngestionKeyword.properties\\E"
+  }, {
+    "pattern" : "\\QMETA-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/com.Anemoi.InvestorRelation.IncomeStatement.$IncomeStatementDaoImpl$Definition$Reference\\E"
+  }, {
+    "pattern" : "\\QMETA-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/com.Anemoi.InvestorRelation.CashFlow.$CashFlowDaoImpl$Definition$Reference\\E"
+  }, {
+    "pattern" : "\\QMETA-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/com.Anemoi.InvestorRelation.RoleModel.$RoleModelController$Definition$Reference\\E"
+  }, {
+    "pattern" : "\\QMETA-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/com.Anemoi.InvestorRelation.UserModel.$UserController$Definition$Reference\\E"
+  }, {
+    "pattern" : "\\QMETA-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/com.Anemoi.InvestorRelation.FinancialRatio.$FinancialRatioController$Definition$Reference\\E"
+  }, {
+    "pattern" : "\\QMETA-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/com.Anemoi.InvestorRelation.BalanceSheet.$BalanceSheetController$Definition$Reference\\E"
+  }, {
+    "pattern" : "\\QMETA-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/com.Anemoi.InvestorRelation.AnalystDetails.$AnalystDetailsDaoImpl$Definition$Reference\\E"
+  }, {
+    "pattern" : "\\QMETA-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/com.Anemoi.InvestorRelation.ShareHolderDataFrom.$ShareHolderDataFromServiceImpl$Definition$Reference\\E"
+  }, {
+    "pattern" : "\\QMETA-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/com.Anemoi.InvestorRelation.RoleModel.$RoleMoldeDaoImpl$Definition$Reference\\E"
+  }, {
+    "pattern" : "\\Qrequest.properties\\E"
+  }, {
+    "pattern" : "\\QMETA-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/com.Anemoi.InvestorRelation.DataIngestion.$DataIngestionController$Definition$Reference\\E"
+  }, {
+    "pattern" : "\\QMETA-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/com.Anemoi.InvestorRelation.ShareHolderDataFrom.$ShareHolderDataFromDaoImpl$Definition$Reference\\E"
+  }, {
+    "pattern" : "\\Qresponse.properties\\E"
+  }, {
+    "pattern" : "\\QMETA-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/com.Anemoi.InvestorRelation.GlobalExeption.$GlobalExceptionHandler$Definition$Reference\\E"
+  }, {
+    "pattern" : "\\QMETA-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/com.Anemoi.InvestorRelation.CashFlow.$CashFlowController$Definition$Reference\\E"
+  }, {
+    "pattern" : "\\QMETA-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/com.Anemoi.InvestorRelation.AnalystLineItem.$AnalystLineItemDaoImpl$Definition$Reference\\E"
+  }, {
+    "pattern" : "\\QMETA-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/com.Anemoi.InvestorRelation.IncomeStatement.$IncomeStatementController$Definition$Reference\\E"
+  }, {
+    "pattern" : "\\Qlogback.xml\\E"
+  }, {
+    "pattern" : "\\QMETA-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/com.Anemoi.InvestorRelation.CashFlow.$CashFlowServiceImpl$Definition$Reference\\E"
+  }, {
+    "pattern" : "\\QMETA-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/com.Anemoi.InvestorRelation.RoleModel.$RoleModelServiceImpl$Definition$Reference\\E"
+  }, {
+    "pattern" : "\\QMETA-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/com.Anemoi.InvestorRelation.AnalystLineItem.$AnalystLineItemServiceImpl$Definition$Reference\\E"
+  }, {
+    "pattern" : "\\QMETA-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/com.Anemoi.InvestorRelation.FinancialRatio.$FinancialRatioServiceImpl$Definition$Reference\\E"
+  }, {
+    "pattern" : "\\QMETA-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/com.Anemoi.InvestorRelation.UserModel.$UserServiceImpl$Definition$Reference\\E"
+  }, {
+    "pattern" : "\\QMETA-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/com.Anemoi.InvestorRelation.AnalystLineItem.$AnalystLineItemController$Definition$Reference\\E"
+  }, {
+    "pattern" : "\\QMETA-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/com.Anemoi.InvestorRelation.IncomeStatement.$IncomeStatementServiceImpl$Definition$Reference\\E"
+  }, {
+    "pattern" : "\\QMETA-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/com.Anemoi.InvestorRelation.ShareHolderContact.$ShareHolderContactDaoImpl$Definition$Reference\\E"
+  }, {
+    "pattern" : "\\Qapplication.yml\\E"
+  }, {
+    "pattern" : "\\QMETA-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/com.Anemoi.InvestorRelation.AnalystDetails.$AnalystDetailsServiceImpl$Definition$Reference\\E"
+  }, {
+    "pattern" : "\\QMETA-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/com.Anemoi.MailSession.$MailServiceImpl$Definition$Reference\\E"
+  }, {
+    "pattern" : "\\QMETA-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/com.Anemoi.InvestorRelation.UserModel.$UserDaoImpl$Definition$Reference\\E"
+  }, {
+    "pattern" : "\\QMETA-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/com.Anemoi.InvestorRelation.ShareHolderMeeting.$ShareHolderMeetingServiceImpl$Definition$Reference\\E"
+  }, {
+    "pattern" : "\\QMETA-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/com.Anemoi.InvestorRelation.FinancialRatio.$FinancialRatioDaoImpl$Definition$Reference\\E"
+  }, {
+    "pattern" : "\\QMETA-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/com.Anemoi.InvestorRelation.ShareHolderContact.$ShareHolderContactServiceImpl$Definition$Reference\\E"
+  }, {
+    "pattern" : "\\Qdatabase.properties\\E"
+  }, {
+    "pattern" : "\\QMETA-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/com.Anemoi.InvestorRelation.ShareHolderContact.$ShareHolderContactController$Definition$Reference\\E"
+  }, {
+    "pattern" : "\\QMETA-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/com.Anemoi.InvestorRelation.DataIngestion.$DataIngestionServiceImpl$Definition$Reference\\E"
+  }, {
+    "pattern" : "\\QMETA-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/com.Anemoi.InvestorRelation.ShareHolderMeeting.$ShareHolderMeetingController$Definition$Reference\\E"
+  }, {
+    "pattern" : "\\QMETA-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/com.Anemoi.InvestorRelation.BalanceSheet.$BalanceSheetServiceImpl$Definition$Reference\\E"
+  }, {
+    "pattern" : "\\QMETA-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/com.Anemoi.InvestorRelation.ShareHolderMeeting.$ShareHolderMeetingDaoImpl$Definition$Reference\\E"
+  }, {
+    "pattern" : "\\QMETA-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/com.Anemoi.InvestorRelation.ShareHolderDataFrom.$ShareHolderDataFromController$Definition$Reference\\E"
+  } ]
+}

@@ -1,0 +1,17 @@
+micronaut:
+   server:
+    max-request-size: '500MB'
+    multipart:
+           max-file-size: '500MB'
+    cors:
+            enabled: true
+    
+#    
+#datasources:
+#  default:
+#    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+#    db-type: mssql
+#netty:
+#  default:
+#    allocator:
+#      max-order: 3
