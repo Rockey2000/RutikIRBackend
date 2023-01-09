@@ -45,7 +45,7 @@ public static final String DATA_BASE_PLACE_HOLDER = "#$DataBaseName#$";
    
     //  DataIngestion Mapping table queries
    
-    public static final String INSERT_INTO_DATAINGESTION_MAPPINGTABLE="INSERT INTO #$DataBaseName#$.dbo.dataIngestionMappingtable values(?,?,?,?,?,?,?)";
+    public static final String INSERT_INTO_DATAINGESTION_MAPPINGTABLE="INSERT INTO #$DataBaseName#$.dbo.dataIngestionMappingtable values(?,?,?,?,?,?,?,?,?,?)";
     
    public static final String SELECT_DATAINGESTION_MAPPING_TABLE="SELECT * FROM #$DataBaseName#$.dbo.dataIngestionMappingtable ";
 

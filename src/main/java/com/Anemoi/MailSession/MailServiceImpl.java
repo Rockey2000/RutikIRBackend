@@ -26,7 +26,7 @@ public class MailServiceImpl  implements MailService{
 	@Override
 	public void sendFirstTimeRegistrationMailToUser(Transport transport, String email, String firstName,
 			String roleName,String password) {
-		// TODO Auto-generated method stub
+		
 		logger.debug(
 				"inside sendFirstTimeRegistrationMailToUser(4 arg) method :recipientEmail is :: " + email);
 		logger.debug("cheking thread name " + Thread.currentThread().getName() + "id" + Thread.currentThread().getId());
@@ -42,7 +42,7 @@ public class MailServiceImpl  implements MailService{
 		try {
 			message.setFrom(new InternetAddress(userName));
 			message.addRecipient(Message.RecipientType.TO, new InternetAddress(email));
-//			message.addRecipient(Message.RecipientType.TO, new InternetAddress("shewalegorakh880540@gmail.com"));
+
 			message.setSubject(MailServiceConstant.FIRST_TIME_REG_SUBJECT);
 			message.setSubject("Sending Notification");
 
@@ -50,10 +50,6 @@ public class MailServiceImpl  implements MailService{
 					firstName);
 			content = content.replace(MailServiceConstant.PASSWORD, password);
 			content = content.replace(MailServiceConstant.ROLLNAME, roleName);
-			
-//			String content = "Hello gorakh You able to send email notification";
-
-			
 			message.setContent(content, MailServiceConstant.CONTENT_TYPE_HTML);
 			logger.debug("sending the mail............");
 			long start = System.currentTimeMillis();
@@ -63,10 +59,9 @@ public class MailServiceImpl  implements MailService{
 			logger.debug("first time registration mail successfully send to user : " + email);
 
 		} catch (AddressException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (MessagingException e) {
-			// TODO Auto-generated catch block
+		
 			e.printStackTrace();
 		}
 	}

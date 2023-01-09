@@ -29,15 +29,15 @@ public class UserQueryConstant {
 	
 	public static final String CREATEDON="createdOn";
 	
-    public static final String  INSERT_INTO_USERDETAILS = "INSERT INTO #$DataBaseName#$.dbo.user1 values(?,?,?,?,?,?,?,?,?,?,?,?)";
+    public static final String  INSERT_INTO_USERDETAILS = "INSERT INTO #$DataBaseName#$.dbo.userTable values(?,?,?,?,?,?,?,?,?,?,?,?)";
 	
-	public static final String SELECT_USER_BY_ID = "SELECT * FROM #$DataBaseName#$.dbo.user1 where userid=?";
+	public static final String SELECT_USER_BY_ID = "SELECT * FROM #$DataBaseName#$.dbo.userTable where userid=?";
 	
-	public static final String SELECT_ALL_USERS = "SELECT *FROM #$DataBaseName#$.dbo.user1";
+	public static final String SELECT_ALL_USERS = "SELECT *FROM #$DataBaseName#$.dbo.userTable";
 	
-	public static final String UPDATE_USER ="UPDATE #$DataBaseName#$.dbo.user1 SET firstName=?, lastName=?, email=?, mobileNumber=?, domain=?, assignedName=?, roleName=?,userStatus=? ,password=?, editedOn=? WHERE userid=?";
+	public static final String UPDATE_USER ="UPDATE #$DataBaseName#$.dbo.userTable SET firstName=?, lastName=?, email=?, mobileNumber=?, domain=?, assignedName=?, roleName=?,userStatus=? ,password=?, editedOn=? WHERE userid=?";
  
-	public static final String DELETE_USER_BY_ID = "DELETE #$DataBaseName#$.dbo.user1 WHERE userid=?";
+	public static final String DELETE_USER_BY_ID = "DELETE #$DataBaseName#$.dbo.userTable WHERE userid=?";
 	
-	public static final String SELECT_USER_BY_ROLENAME="SELECT * FROM #$DataBaseName#$.dbo.user1 WHERE roleName=?";
+	public static final String SELECT_USER_BY_ROLENAME="SELECT * FROM #$DataBaseName#$.dbo.userTable WHERE roleName=?";
 }

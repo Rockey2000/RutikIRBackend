@@ -4,6 +4,8 @@ public class DataIngestionMappingModel {
 	
 	private String mapId;
 	
+	private long fieldId;
+	
 	private String analyst;
 	
 	private String companyName;
@@ -12,9 +14,13 @@ public class DataIngestionMappingModel {
 
 	private String year;
 	
-	private String lineItem;
+	private String lineItemName;
 	
 	private String quarter;
+	
+	private String type;
+	
+	private String value;
 
 	public String getMapId() {
 		return mapId;
@@ -22,6 +28,14 @@ public class DataIngestionMappingModel {
 
 	public void setMapId(String mapId) {
 		this.mapId = mapId;
+	}
+
+	public long getFieldId() {
+		return fieldId;
+	}
+
+	public void setFieldId(long fieldId) {
+		this.fieldId = fieldId;
 	}
 
 	public String getAnalyst() {
@@ -56,12 +70,12 @@ public class DataIngestionMappingModel {
 		this.year = year;
 	}
 
-	public String getLineItem() {
-		return lineItem;
+	public String getLineItemName() {
+		return lineItemName;
 	}
 
-	public void setLineItem(String lineItem) {
-		this.lineItem = lineItem;
+	public void setLineItemName(String lineItemName) {
+		this.lineItemName = lineItemName;
 	}
 
 	public String getQuarter() {
@@ -72,21 +86,48 @@ public class DataIngestionMappingModel {
 		this.quarter = quarter;
 	}
 
-	public DataIngestionMappingModel(String mapId, String analyst, String companyName, String documentType, String year,
-			String lineItem, String quarter) {
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	public String getValue() {
+		return value;
+	}
+
+	public void setValue(String value) {
+		this.value = value;
+	}
+
+	public DataIngestionMappingModel(String mapId, long fieldId, String analyst, String companyName,
+			String documentType, String year, String lineItemName, String quarter, String type, String value) {
 		super();
 		this.mapId = mapId;
+		this.fieldId = fieldId;
 		this.analyst = analyst;
 		this.companyName = companyName;
 		this.documentType = documentType;
 		this.year = year;
-		this.lineItem = lineItem;
+		this.lineItemName = lineItemName;
 		this.quarter = quarter;
+		this.type = type;
+		this.value = value;
 	}
 
 	public DataIngestionMappingModel() {
 		super();
 	}
-	
 
-}
+	@Override
+	public String toString() {
+		return "DataIngestionMappingModel [mapId=" + mapId + ", fieldId=" + fieldId + ", analyst=" + analyst
+				+ ", companyName=" + companyName + ", documentType=" + documentType + ", year=" + year
+				+ ", lineItemName=" + lineItemName + ", quarter=" + quarter + ", type=" + type + ", value=" + value
+				+ "]";
+	}
+	
+	
+	}

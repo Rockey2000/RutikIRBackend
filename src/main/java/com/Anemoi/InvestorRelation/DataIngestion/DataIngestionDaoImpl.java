@@ -623,12 +623,15 @@ public class DataIngestionDaoImpl implements DataIngestionDao {
 			String mapId = UUID.randomUUID().toString();
 			dataIngestionMappingTable.setMapId(mapId);
 			psta.setString(1, dataIngestionMappingTable.getMapId());
-			psta.setString(2, dataIngestionMappingTable.getAnalyst());
-			psta.setString(3, dataIngestionMappingTable.getCompanyName());
-			psta.setString(4, dataIngestionMappingTable.getDocumentType());
-			psta.setString(5, dataIngestionMappingTable.getYear());
-			psta.setString(6, dataIngestionMappingTable.getLineItem());
-			psta.setString(7, dataIngestionMappingTable.getQuarter());
+			psta.setLong(2, dataIngestionMappingTable.getFieldId());
+			psta.setString(3, dataIngestionMappingTable.getAnalyst());
+			psta.setString(4, dataIngestionMappingTable.getCompanyName());
+			psta.setString(5, dataIngestionMappingTable.getDocumentType());
+			psta.setString(6, dataIngestionMappingTable.getYear());
+			psta.setString(7, dataIngestionMappingTable.getLineItemName());
+			psta.setString(8, dataIngestionMappingTable.getQuarter());
+			psta.setString(9, dataIngestionMappingTable.getType());
+			psta.setString(10, dataIngestionMappingTable.getValue());
 			psta.executeUpdate();
 			return dataIngestionMappingTable;
 
@@ -661,12 +664,15 @@ public class DataIngestionDaoImpl implements DataIngestionDao {
 		    {
 		    	DataIngestionMappingModel model=new DataIngestionMappingModel();
 		    	model.setMapId(rs.getString("mapId"));
+		    	model.setFieldId(rs.getLong("FieldId"));
 		    	model.setAnalyst(rs.getString("analyst"));
 		    	model.setCompanyName(rs.getString("companyName"));
 		    	model.setDocumentType(rs.getString("documentType"));
 		    	model.setYear(rs.getString("year"));
-		    	model.setLineItem(rs.getString("lineItem"));
+		    	model.setLineItemName(rs.getString("lineItemName"));
 		    	model.setQuarter(rs.getString("quarter"));
+		    	model.setYear(rs.getString("type"));
+		    	model.setValue(rs.getString("value"));
 		    	list.add(model);
 		    }
 		    return list;
