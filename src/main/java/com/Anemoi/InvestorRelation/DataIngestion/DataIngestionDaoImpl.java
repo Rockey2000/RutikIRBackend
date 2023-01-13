@@ -61,14 +61,14 @@ public class DataIngestionDaoImpl implements DataIngestionDao {
 		Connection connection = null;
 		PreparedStatement psta = null;
 		Date date = new Date();
-		System.out.println("database name" + dataBaseName);
+		
 		try {
-			System.out.println("check 1");
+	
 			System.out.println("file name" +dataIngestionModel.getFileName());
-			System.out.println("check 1");
+		
 
 			connection = InvestorDatabaseUtill.getConnection();
-			System.out.println("check 1");
+	
 
 			psta = connection.prepareStatement(DataIngestionQueryConstant.INSERT_INTO_DATA_INGESTION
 					.replace(DataIngestionQueryConstant.DATA_BASE_PLACE_HOLDER, dataBaseName));
@@ -559,36 +559,37 @@ public class DataIngestionDaoImpl implements DataIngestionDao {
   	    pstmt=connection.prepareStatement(DataIngestionQueryConstant.UPDATE_DATAINGESTION_TABLEDETAILS.replace(DataIngestionQueryConstant.DATA_BASE_PLACE_HOLDER, dataBaseName));
    	    Iterator it=dataIngestionTableData.iterator();
    	    while(it.hasNext())
+   	    	
    	    {
    	    	DataIngestionTableModel model=(DataIngestionTableModel) it.next();
-   	    	pstmt.setString(1, model.getTableName());
- 		   pstmt.setString(2, model.getCol1());
- 		   pstmt.setString(3, model.getCol2());
- 		   pstmt.setString(4, model.getCol3());
- 		   pstmt.setString(5, model.getCol4());
- 		   pstmt.setString(6, model.getCol5());
- 		   pstmt.setString(7, model.getCol6());
- 		   pstmt.setString(8, model.getCol7());
- 		   pstmt.setString(9, model.getCol8());
- 		   pstmt.setString(10, model.getCol9());
- 		   pstmt.setString(11, model.getCol10());
- 		   pstmt.setString(12, model.getCol11());
- 		   pstmt.setString(13, model.getCol12());
- 		   pstmt.setString(14, model.getCol13());
- 		   pstmt.setString(15, model.getCol14());
- 		   pstmt.setString(16, model.getCol15());
- 		   pstmt.setString(17, model.getCol16());
- 		   pstmt.setString(18, model.getCol17());
- 		   pstmt.setString(19,model.getCol8());
- 		   pstmt.setString(20, model.getCol19());
- 		   pstmt.setString(21, model.getCol20());
- 		   pstmt.setString(22, model.getCol21());
- 		   pstmt.setString(23, model.getCol22());
- 		   pstmt.setString(24, model.getCol23());
- 		   pstmt.setString(25, model.getCol24());
- 		   pstmt.setString(26, model.getCol25());
+   	    	
+ 		   pstmt.setString(1, model.getCol1());
+ 		   pstmt.setString(2, model.getCol2());
+ 		   pstmt.setString(3, model.getCol3());
+ 		   pstmt.setString(4, model.getCol4());
+ 		   pstmt.setString(5, model.getCol5());
+ 		   pstmt.setString(6, model.getCol6());
+ 		   pstmt.setString(7, model.getCol7());
+ 		   pstmt.setString(8, model.getCol8());
+ 		   pstmt.setString(9, model.getCol9());
+ 		   pstmt.setString(10, model.getCol10());
+ 		   pstmt.setString(11, model.getCol11());
+ 		   pstmt.setString(12, model.getCol12());
+ 		   pstmt.setString(13, model.getCol13());
+ 		   pstmt.setString(14, model.getCol14());
+ 		   pstmt.setString(15, model.getCol15());
+ 		   pstmt.setString(16, model.getCol16());
+ 		   pstmt.setString(17, model.getCol17());
+ 		   pstmt.setString(18,model.getCol8());
+ 		   pstmt.setString(19, model.getCol19());
+ 		   pstmt.setString(20, model.getCol20());
+ 		   pstmt.setString(21, model.getCol21());
+ 		   pstmt.setString(22, model.getCol22());
+ 		   pstmt.setString(23, model.getCol23());
+ 		   pstmt.setString(24, model.getCol24());
+ 		   pstmt.setString(25, model.getCol25());
  		  // pstmt.seti(27,model.getFieldId() );
- 		   pstmt.setLong(27, model.getFieldId());
+ 		   pstmt.setLong(26, model.getFieldId());
    	    
  		   pstmt.executeUpdate();
    	    }
@@ -609,8 +610,8 @@ public class DataIngestionDaoImpl implements DataIngestionDao {
 
 
 	@Override
-	public DataIngestionMappingModel addDataIngestionMappingTableData(
-			DataIngestionMappingModel dataIngestionMappingTable, String dataBaseName) throws DataIngestionDaoException {
+	public ArrayList<DataIngestionMappingModel> addDataIngestionMappingTableData(
+			ArrayList<DataIngestionMappingModel> dataIngestionMappingTable, String dataBaseName) throws DataIngestionDaoException {
 		Connection connection = null;
 		PreparedStatement psta = null;
 		Date date = new Date();
@@ -619,22 +620,25 @@ public class DataIngestionDaoImpl implements DataIngestionDao {
 			connection = InvestorDatabaseUtill.getConnection();
 			psta = connection.prepareStatement(DataIngestionQueryConstant.INSERT_INTO_DATAINGESTION_MAPPINGTABLE
 					.replace(DataIngestionQueryConstant.DATA_BASE_PLACE_HOLDER, dataBaseName));
-			
+			Iterator ir=dataIngestionMappingTable.iterator();
+			while(ir.hasNext())
+			{
+				DataIngestionMappingModel dataIngestionModel=(DataIngestionMappingModel) ir.next();
 			String mapId = UUID.randomUUID().toString();
-			dataIngestionMappingTable.setMapId(mapId);
-			psta.setString(1, dataIngestionMappingTable.getMapId());
-			psta.setLong(2, dataIngestionMappingTable.getFieldId());
-			psta.setString(3, dataIngestionMappingTable.getAnalyst());
-			psta.setString(4, dataIngestionMappingTable.getCompanyName());
-			psta.setString(5, dataIngestionMappingTable.getDocumentType());
-			psta.setString(6, dataIngestionMappingTable.getYear());
-			psta.setString(7, dataIngestionMappingTable.getLineItemName());
-			psta.setString(8, dataIngestionMappingTable.getQuarter());
-			psta.setString(9, dataIngestionMappingTable.getType());
-			psta.setString(10, dataIngestionMappingTable.getValue());
+			dataIngestionModel.setMapId(mapId);
+			psta.setString(1, dataIngestionModel.getMapId());
+			psta.setLong(2, dataIngestionModel.getFieldId());
+			psta.setString(3, dataIngestionModel.getAnalyst());
+			psta.setString(4, dataIngestionModel.getCompanyName());
+			psta.setString(5, dataIngestionModel.getDocumentType());
+			psta.setString(6, dataIngestionModel.getYear());
+			psta.setString(7, dataIngestionModel.getLineItemName());
+			psta.setString(8, dataIngestionModel.getQuarter());
+			psta.setString(9, dataIngestionModel.getType());
+			psta.setString(10, dataIngestionModel.getValue());
 			psta.executeUpdate();
-			return dataIngestionMappingTable;
-
+			}
+     return dataIngestionMappingTable;
 		} catch (Exception e) {
 			e.printStackTrace();
 			// TODO: handle exception
@@ -686,6 +690,41 @@ public class DataIngestionDaoImpl implements DataIngestionDao {
 
 		}
 		}
+
+
+
+	@Override
+	public DataIngestionMappingModel getDataIngestionMappingDetailsByMapId(String mapId, String dataBaseName) throws DataIngestionDaoException {
+
+             Connection con=null;
+             PreparedStatement psta=null;
+             ResultSet rs=null;
+             try
+             {
+            	 con=InvestorDatabaseUtill.getConnection();
+            	 psta=con.prepareStatement(DataIngestionQueryConstant.SELECT_DATAINGESTION_MAPPINGTABLE_BYMAPID.replace(DataIngestionQueryConstant.DATA_BASE_PLACE_HOLDER, dataBaseName));
+            	  psta.setString(1, mapId);
+            	 rs=psta.executeQuery();
+            	 while(rs.next())
+            	 {
+            		 DataIngestionMappingModel mapData=new DataIngestionMappingModel();
+            		 mapData.setMapId(rs.getString("mapId"));
+            		 mapData.setFieldId(rs.getLong("fieldId"));
+            		 mapData.setAnalyst(rs.getString("analyst"));
+            		 mapData.setCompanyName(rs.getString("companyName"));
+            		 mapData.setYear(rs.getString("year"));
+            		 mapData.setLineItemName(rs.getString("lineItemName"));
+            		 mapData.setQuarter(rs.getString("quarter"));
+            		 mapData.setType(rs.getString("type"));
+            		 mapData.setValue(rs.getString("value"));
+            		 return mapData;
+            	 }
+             }catch (Exception e) {
+				// TODO: handle exception
+            	 throw new DataIngestionDaoException("unable to get dataIngestionMapping details");
+			}
+             return null;
+	}
 	}
 
 

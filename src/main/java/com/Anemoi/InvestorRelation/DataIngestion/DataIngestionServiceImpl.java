@@ -168,12 +168,12 @@ public ArrayList<DataIngestionTableModel> updateeDataIngestionTabledata(ArrayLis
 }
 
 @Override
-public DataIngestionMappingModel addDataIngestionMappingTable(DataIngestionMappingModel dataIngestionMappingTable) throws DataIngestionServiceException {
+public ArrayList<DataIngestionMappingModel> addDataIngestionMappingTable(ArrayList<DataIngestionMappingModel> dataIngestionMappingTable) throws DataIngestionServiceException {
 	// TODO Auto-generated method stub
     try
     {
     	String dataBaseName=DataIngestionServiceImpl.dataBaseName();
-    	DataIngestionMappingModel mappingModel=this.dataIngestionDao.addDataIngestionMappingTableData(dataIngestionMappingTable,dataBaseName);
+    	ArrayList<DataIngestionMappingModel> mappingModel=this.dataIngestionDao.addDataIngestionMappingTableData(dataIngestionMappingTable,dataBaseName);
          return mappingModel;
     
     }
@@ -196,6 +196,28 @@ public ArrayList<DataIngestionMappingModel> getDataIngestionMappingDetailss() th
 	    	throw new DataIngestionServiceException("unable to get dataingestion mapping table data "+e.getMessage());
 		}
 }
+
+@Override
+public DataIngestionMappingModel getDataIngestionMappingByMapId(String mapId) throws DataIngestionServiceException {
+	// TODO Auto-generated method stub
+
+      try
+      {
+    	  String dataBaseName=DataIngestionServiceImpl.dataBaseName();
+    	  if(mapId==null || mapId.isEmpty())
+    	  {
+    		  System.out.println("mapid cannot be null or empty");
+    	  }
+    	  DataIngestionMappingModel mappingdata=this.dataIngestionDao.getDataIngestionMappingDetailsByMapId(mapId,dataBaseName);
+          return mappingdata;
+      }
+      catch (Exception e) {
+		// TODO: handle exception
+        throw new DataIngestionServiceException("unable to get dataIngestion mapping details");
+        
+	}
+}
+
 
 
 

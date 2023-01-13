@@ -8,6 +8,7 @@ import com.Anemoi.InvestorRelation.Configuration.ReadPropertiesFile;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.HttpStatus;
 import io.micronaut.http.MediaType;
+import io.micronaut.http.MutableHttpResponse;
 import io.micronaut.http.annotation.Body;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Delete;
@@ -134,11 +135,11 @@ public class DataIngestionController {
 	
 	///////Data Ingestion Mapping table API
 	@Post("/addDataIngestionMappingTableDetails")
-	public HttpResponse<DataIngestionMappingModel> addDataIngestionMappingDetails(@Body DataIngestionMappingModel dataIngestionMappingTable) throws DataIngestionControllerException
+	public  ArrayList<DataIngestionMappingModel> addDataIngestionMappingDetails(@Body ArrayList<DataIngestionMappingModel> dataIngestionMappingTable) throws DataIngestionControllerException
 	{  
 		try {
-		DataIngestionMappingModel mappingTable=this.dataingestionService.addDataIngestionMappingTable(dataIngestionMappingTable);
-		return HttpResponse.status(HttpStatus.OK).body(mappingTable);
+		ArrayList<DataIngestionMappingModel> mappingTable=this.dataingestionService.addDataIngestionMappingTable(dataIngestionMappingTable);
+		return mappingTable;
 		}
 		catch (Exception e) {
 			// TODO: handle exception
@@ -157,6 +158,21 @@ public class DataIngestionController {
 		catch (Exception e) {
 			// TODO: handle exception
 			throw new DataIngestionControllerException(ReadPropertiesFile.readResponseProperty("101"), e,400,e.getMessage());
+		}
+	}
+	
+	@Get("/getDataIngestionMappingDetailsByMapid/{mapId}")
+	public DataIngestionMappingModel deleteMappingDataById(@PathVariable("mapId") String mapId) throws DataIngestionControllerException
+	{
+		try
+		{
+			
+			DataIngestionMappingModel response=this.dataingestionService.getDataIngestionMappingByMapId(mapId);
+			return response;
+		}
+		catch (Exception e) {
+			throw new DataIngestionControllerException(ReadPropertiesFile.readResponseProperty("101"),e,400,e.getMessage());
+			// TODO: handle exception
 		}
 	}
 	

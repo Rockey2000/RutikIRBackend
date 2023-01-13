@@ -32,11 +32,14 @@ public interface DataIngestionDao {
 			String dataBaseName) throws DataIngestionDaoException;
 
 
-	DataIngestionMappingModel addDataIngestionMappingTableData(DataIngestionMappingModel dataIngestionMappingTable,
+	ArrayList<DataIngestionMappingModel> addDataIngestionMappingTableData(ArrayList<DataIngestionMappingModel> dataIngestionMappingTable,
 			String dataBaseName) throws DataIngestionDaoException;
 
 
 	ArrayList<DataIngestionMappingModel> getDataIngestionMappingTableDetails(String dataBaseName) throws DataIngestionDaoException;
+
+
+	DataIngestionMappingModel getDataIngestionMappingDetailsByMapId(String mapId, String dataBaseName) throws DataIngestionDaoException;
 
 
 	

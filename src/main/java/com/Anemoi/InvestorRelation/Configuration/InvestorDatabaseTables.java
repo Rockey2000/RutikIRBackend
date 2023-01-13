@@ -1,4 +1,4 @@
-package com.Anemoi.InvestorRelation.Configuration;
+   package com.Anemoi.InvestorRelation.Configuration;
 
 public class InvestorDatabaseTables {
 	

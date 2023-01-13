@@ -21,9 +21,13 @@ public interface DataIngestionService {
 	public ArrayList<DataIngestionTableModel> updateeDataIngestionTabledata(ArrayList<DataIngestionTableModel> dataIngestionTableData,
 			String tableId) throws DataIngestionServiceException;
 
-	public DataIngestionMappingModel addDataIngestionMappingTable(DataIngestionMappingModel dataIngestionMappingTable) throws DataIngestionServiceException;
+	
+	//DataIngestion Mapping table 
+	public ArrayList<DataIngestionMappingModel> addDataIngestionMappingTable(ArrayList<DataIngestionMappingModel> dataIngestionMappingTable) throws DataIngestionServiceException;
 
 	public ArrayList<DataIngestionMappingModel> getDataIngestionMappingDetailss() throws DataIngestionServiceException;
+
+	public DataIngestionMappingModel getDataIngestionMappingByMapId(String mapId) throws DataIngestionServiceException;
 
 	
 	
