@@ -3,18 +3,20 @@ package com.Anemoi.InvestorRelation.AnalystDetails;
 import com.Anemoi.InvestorRelation.GlobalExeption.GlobalException;
 
 public class AnalystDetailsControllerException extends GlobalException {
-	private static final long serialVirsionUID=1L;
-	
+	private static final long serialVirsionUID = 1L;
+
 	public AnalystDetailsControllerException(int errorCode, String developerMessage, String message) {
-		super(errorCode, developerMessage, message);
-		// TODO Auto-generated constructor stub
+
+		this.errorCode = errorCode;
+		this.developerMessage = developerMessage;
+		this.message = message;
 	}
 
+	public AnalystDetailsControllerException(String message, Throwable cause, int errorCode, String developerMessage) {
 
-	public AnalystDetailsControllerException(String message, Throwable cause,int errorCode, String developerMessage) {
-		super(message, cause, errorCode,developerMessage);
-		// TODO Auto-generated constructor stub
+		this.errorCode = errorCode;
+		this.developerMessage = developerMessage;
+		this.message = message;
 	}
 
-	
 }

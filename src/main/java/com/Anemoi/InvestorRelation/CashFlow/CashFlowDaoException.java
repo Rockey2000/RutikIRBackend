@@ -1,8 +1,8 @@
 package com.Anemoi.InvestorRelation.CashFlow;
 
 public class CashFlowDaoException extends Exception {
-	
-	private static final long SerialVertionUID=1L;
+
+	private static final long SerialVertionUID = 1L;
 
 	public CashFlowDaoException() {
 		super();
@@ -29,7 +29,5 @@ public class CashFlowDaoException extends Exception {
 		super(cause);
 		// TODO Auto-generated constructor stub
 	}
-	
-	
 
 }

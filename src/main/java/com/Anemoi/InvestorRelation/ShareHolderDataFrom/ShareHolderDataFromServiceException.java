@@ -1,8 +1,8 @@
 package com.Anemoi.InvestorRelation.ShareHolderDataFrom;
 
-public class ShareHolderDataFromServiceException  extends Exception{
+public class ShareHolderDataFromServiceException extends Exception {
 
-	private static final long SerialVertionUID=1L;
+	private static final long SerialVertionUID = 1L;
 
 	public ShareHolderDataFromServiceException() {
 		super();
@@ -29,5 +29,5 @@ public class ShareHolderDataFromServiceException  extends Exception{
 		super(cause);
 		// TODO Auto-generated constructor stub
 	}
-	
+
 }

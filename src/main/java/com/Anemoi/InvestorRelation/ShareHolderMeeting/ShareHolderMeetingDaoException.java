@@ -1,8 +1,8 @@
 package com.Anemoi.InvestorRelation.ShareHolderMeeting;
 
 public class ShareHolderMeetingDaoException extends Exception {
-	
-	private static final long SerialVertionUID=1L;
+
+	private static final long SerialVertionUID = 1L;
 
 	public ShareHolderMeetingDaoException() {
 		super();
@@ -29,7 +29,5 @@ public class ShareHolderMeetingDaoException extends Exception {
 		super(cause);
 		// TODO Auto-generated constructor stub
 	}
-	
-	
 
 }

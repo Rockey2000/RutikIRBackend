@@ -1,8 +1,8 @@
 package com.Anemoi.InvestorRelation.IncomeStatement;
 
 public class IncomeStatementServiceException extends Exception {
-	
-	private static final long SerialVersionUID=1L;
+
+	private static final long SerialVersionUID = 1L;
 
 	public IncomeStatementServiceException() {
 		super();
@@ -29,7 +29,5 @@ public class IncomeStatementServiceException extends Exception {
 		super(cause);
 		// TODO Auto-generated constructor stub
 	}
-	
-	
 
 }

@@ -1,14 +1,12 @@
 package com.Anemoi.InvestorRelation.BalanceSheet;
 
 public class BalanceSheetEntity {
-	
-private String balanceid;
-	
+
+	private String balanceid;
+
 	private String lineItem;
-	
+
 	private String alternativeName;
-	
-	private String type;
 
 	public String getBalanceid() {
 		return balanceid;
@@ -34,31 +32,15 @@ private String balanceid;
 		this.alternativeName = alternativeName;
 	}
 
-	public String getType() {
-		return type;
-	}
-
-	public void setType(String type) {
-		this.type = type;
-	}
-
-	public BalanceSheetEntity(String balanceid, String lineItem, String alternativeName, String type) {
+	public BalanceSheetEntity(String balanceid, String lineItem, String alternativeName) {
 		super();
 		this.balanceid = balanceid;
 		this.lineItem = lineItem;
 		this.alternativeName = alternativeName;
-		this.type = type;
 	}
 
 	public BalanceSheetEntity() {
 		super();
 	}
 
-	@Override
-	public String toString() {
-		return "BalanceSheetEntity [balanceid=" + balanceid + ", lineItem=" + lineItem + ", alternativeName="
-				+ alternativeName + ", type=" + type + "]";
-	}
-	
-	
 }

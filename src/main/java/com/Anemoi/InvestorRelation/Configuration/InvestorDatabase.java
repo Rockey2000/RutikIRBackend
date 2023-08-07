@@ -1,19 +1,18 @@
 package com.Anemoi.InvestorRelation.Configuration;
 
 import java.sql.Connection;
+import java.sql.DatabaseMetaData;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Arrays;
+import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+public class InvestorDatabase extends InvestorDatabaseTables {
 
-
-public class InvestorDatabase extends InvestorDatabaseTables
- {
-
-	
 	public static String DB_CREATE = "CREATE DATABASE ";
 
 	private static final Logger logger = LoggerFactory.getLogger(InvestorDatabase.class);
@@ -23,7 +22,7 @@ public class InvestorDatabase extends InvestorDatabaseTables
 		ResultSet resultset = null;
 		try {
 			System.out.println("welcome " + databasename);
-			connection = InvestorDatabaseUtill.getConnection();
+			connection = InvestorDatabaseUtill.getForDatabaseConnection();
 			resultset = connection.getMetaData().getCatalogs();
 			while (resultset.next()) {
 				String currentDBName = resultset.getString(1);
@@ -42,6 +41,7 @@ public class InvestorDatabase extends InvestorDatabaseTables
 		ResultSet resultset = null;
 		try {
 			connection = InvestorDatabaseUtill.getConnection();
+
 			resultset = connection.getMetaData().getTables(null, null, tableName, new String[] { "table" });
 			while (resultset.next()) {
 				String currentTableName = resultset.getString(3);
@@ -66,57 +66,252 @@ public class InvestorDatabase extends InvestorDatabaseTables
 			boolean isDbExist = isDBExist(dataBaseName);
 			if (!isDbExist) {
 				logger.info(dataBaseName + " database Not exits creating database ......");
-				connection = InvestorDatabaseUtill.getConnection();
+				connection = InvestorDatabaseUtill.getForDatabaseConnection();
+
 				statement = connection.createStatement();
 				statement.executeUpdate(DB_CREATE + dataBaseName);
 				logger.info("checking table are existing");
-				createTables(statement, dataBaseName);
-				System.out.println("tables created");
+
+				  createTable(dataBaseName);
+			
 				logger.info("** create[ " + dataBaseName + "] database successfully... **");
 			} else {
 				logger.info("** create[ " + dataBaseName + "] database already exits... **");
+				
+				  createTable(dataBaseName);
+			
+
+
 			}
 		} catch (Exception e) {
-			// TODO: handle exception
+			e.printStackTrace();
 		} finally {
 			InvestorDatabaseUtill.close(statement, connection);
 		}
 	}
 
-	private static void createTables(Statement statement, String dataBaseName) throws SQLException {
-  try {
-		createRoleModelTable(statement, dataBaseName);
-		createUserTable(statement, dataBaseName);
-		createBalanceSheetTable(statement, dataBaseName);
-		createincomestatementTable(statement, dataBaseName);
-		createcashflowTable(statement, dataBaseName);
-		createshareholderdataformTable(statement, dataBaseName);
-		createshareholdercontactTable(statement, dataBaseName);
-		createshareholdermeetingTable(statement, dataBaseName);
-		createfinancialRatioTable(statement, dataBaseName);
-		createanalystLineItem(statement,dataBaseName);
-		createanalystDetails(statement,dataBaseName);
-		createDataIngestion(statement,dataBaseName);
-		createDataIngestionTableData(statement,dataBaseName);
-		createDataIngestionMappingTable(statement,dataBaseName);
-  }
-  catch (Exception e) {
-	// TODO: handle exception
-	  e.printStackTrace();
-}
+
+
+	private static void createTable(String dataBaseName) throws SQLException, ClassNotFoundException {
+		// TODO Auto-generated method stub
+		Connection connection = null;
+		Statement statement = null;
+
+		connection = InvestorDatabaseUtill.getConnection();
+
+		statement = connection.createStatement();
+		 DatabaseMetaData metaData = connection.getMetaData();
+         List<String> tables = Arrays.asList("rolemodel", "userTable", "balanceSheetform","incomestatement","cashflow","shareholderdataform", "shareholdercontact", "shareholdermeeting","financialRatio","analystLineItem"
+        		, "clientLineItem","analystDetails", "analystContactDetails","nonprocessFileTable", "dataIngestion","forecast","tableList", "dataIngestionaTabelMetaData","dataIngestionMappingtable", "keywordlist", "reportTableHeader","meetingshedulartable","clientcodedetails","clientDetails","whitelablingtable");
+         for (String tableName : tables) {
+             ResultSet rs = metaData.getTables(dataBaseName, null, tableName, null);
+             if (rs.next()) {
+                 System.out.println("Table " + tableName + " already exists, skipping creation.");
+             } else {
+                 System.out.println("Creating table " + tableName + "...");
+                 String sql = "";
+                 switch (tableName) {
+                 
+                     case "rolemodel":
+                    	 createRoleModelTable(statement,dataBaseName);
+                    	 break;
+                    	 
+                     case "userTable":
+                    	 createUserTable(statement, dataBaseName);
+                    	 break;
+                    	 
+                     case "balanceSheetform":
+                    	 createBalanceSheetTable(statement, dataBaseName);
+                    	 break;
+                    	 
+                     case "incomestatement":
+                    	 createincomestatementTable(statement, dataBaseName);
+                    	 break;
+                    	 
+                     case "cashflow":
+                    	 createcashflowTable(statement, dataBaseName);
+                    	 break;
+                    	 
+                     case "shareholderdataform":
+                    	 createshareholderdataformTable(statement, dataBaseName);
+                    	 break;
+                    	 
+                     case "shareholdercontact":
+                    	 createshareholdercontactTable(statement, dataBaseName);
+                    	 break;
+                    	 
+                     case "shareholdermeeting":
+                    	 createshareholdermeetingTable(statement, dataBaseName);
+                    	 break;
+                    	 
+                     case "financialRatio":
+                    	 createfinancialRatioTable(statement, dataBaseName);
+                    	 break;
+                    	 
+                     case "analystLineItem":
+                    	 createanalystLineItem(statement, dataBaseName);
+                    	 break;
+                    	 
+                     case "clientLineItem":
+                    	 createclientLineItem(statement, dataBaseName);
+                    	 break;
+                    	 
+                     case "analystDetails":
+                    	 createanalystDetails(statement, dataBaseName);
+                    	 break;
+                    	 
+                     case "analystContactDetails":
+                    	 createAnalystContactDetails(statement, dataBaseName);
+                    	 break;
+                    	 
+                     case "nonprocessFileTable":
+                    	 createNonprocessFilesTable(statement, dataBaseName);
+                    	 break;
+                    	 
+                     case "dataIngestion":
+                    	 createDataIngestion(statement, dataBaseName);
+                    	 break;
+                    	 
+                     case "forecast":
+                    	 createForcastTable(statement, dataBaseName);
+                    	 break;
+                    	 
+                     case "tableList":
+                    	 createTableList(statement, dataBaseName);
+                    	 break;
+                    	 
+                     case "dataIngestionaTabelMetaData":
+                    	 createDataIngestionTableMetaData(statement, dataBaseName);
+                    	 break;
+                    	 
+                    	 
+                     case "dataIngestionMappingtable":
+                    	 createDataIngestionMappingTable(statement, dataBaseName);
+                    	 break;
+                    	 
+                     case "keywordlist":
+                    	 createKeywordList(statement, dataBaseName);
+                    	 break;
+                    	 
+                     case "reportTableHeader":
+                    	 createReportTableHeader(statement, dataBaseName);
+                    	 break;
+                    	 
+                     case "meetingshedulartable":
+                    	 createnewMeetingtable(statement, dataBaseName);
+                    	 break;
+                    	 
+                     case "clientcodedetails":
+                    	 createclientCodeDetails(statement, dataBaseName);
+                    	 break;
+                    	 
+                     case "clientDetails":
+                    	 createClientDetails(statement, dataBaseName);
+                    	 break;
+                    	 
+                     case "whitelablingtable":
+                    	 createWhiteLablingTable(statement,dataBaseName);
+                    	 break;
+                   
+                    	 
+                 }
+                    	
+                         System.out.println("Table " + tableName + " created successfully.");
+             }
+         }
+	}
+
+
+
+
+	private static void createAnalystContactDetails(Statement statement, String dataBaseName) throws SQLException {
+		// TODO Auto-generated method stub
+		statement.executeUpdate(CREATE_ANALYST_CONTACTDETAILS.replace(DATA_BASE_PLACE_HOLDER, dataBaseName));
+		logger.info("white lableling table  create successfully");
+
+	}
+	private static void createWhiteLablingTable(Statement statement, String dataBaseName) throws SQLException {
+		// TODO Auto-generated method stub
+		statement.executeUpdate(CREATE_WHITELABLING.replace(DATA_BASE_PLACE_HOLDER, dataBaseName));
+		logger.info("white lableling table  create successfully");
+
+	}
+
+	private static void createNonprocessFilesTable(Statement statement, String dataBaseName) throws SQLException {
+
+		statement.executeUpdate(CREATE_NONPROCESS_FILETABLE.replace(DATA_BASE_PLACE_HOLDER, dataBaseName));
+		logger.info("non process files  table  create successfully");
+
+	}
+
+	private static void createclientCodeDetails(Statement statement, String dataBaseName) throws SQLException {
+
+		statement.executeUpdate(CREATE_CLIENCODEDETAILS.replace(DATA_BASE_PLACE_HOLDER, dataBaseName));
+		logger.info("Static client project code and task code table  create successfully");
+
+	}
+
+	private static void createClientDetails(Statement statement, String dataBaseName) throws SQLException {
+
+		statement.executeUpdate(CREATE_CLIENTDETAILS.replace(DATA_BASE_PLACE_HOLDER, dataBaseName));
+		logger.info("client details table create successfully");
+	}
+
+	private static void createnewMeetingtable(Statement statement, String dataBaseName) throws SQLException {
+		// TODO Auto-generated method stub
+		statement.executeUpdate(CREATE_MEETINGSHEDULAR.replace(DATA_BASE_PLACE_HOLDER, dataBaseName));
+		logger.info("new meeting table create successfully");
+
+	}
+
+	private static void createReportTableHeader(Statement statement, String dataBaseName) throws SQLException {
+		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub
+		statement.executeUpdate(CREATE_REPORTTABLEHEADER_TABLE.replace(DATA_BASE_PLACE_HOLDER, dataBaseName));
+		logger.info("Report table header table create successfully");
+
+	}
+
+	private static void createclientLineItem(Statement statement, String dataBaseName) throws SQLException {
+		// TODO Auto-generated method stub
+		statement.executeUpdate(CREATE_CLIENT_LINE_ITEM.replace(DATA_BASE_PLACE_HOLDER, dataBaseName));
+		logger.info("client line item table create successfully");
+
+	}
+
+	private static void createForcastTable(Statement statement, String dataBaseName) throws SQLException {
+		// TODO Auto-generated method stub
+		statement.executeUpdate(CREATE_FORCAST_TABLE.replace(DATA_BASE_PLACE_HOLDER, dataBaseName));
+		logger.info("forcast table create successfully");
+
+	}
+
+	private static void createKeywordList(Statement statement, String dataBaseName) throws SQLException {
+		// TODO Auto-generated method stub
+
+		statement.executeUpdate(CREATE_KEYWORDLIST.replace(DATA_BASE_PLACE_HOLDER, dataBaseName));
+		logger.info("keyword table create successfully");
+
+	}
+
+	private static void createTableList(Statement statement, String dataBaseName) throws SQLException {
+		// TODO Auto-generated method stub
+		statement.executeUpdate(CREATE_TABLE_LIST.replace(DATA_BASE_PLACE_HOLDER, dataBaseName));
+		logger.info("file table list create successfully");
+
 	}
 
 	private static void createDataIngestionMappingTable(Statement statement, String dataBaseName) throws SQLException {
 		statement.executeUpdate(CREATE_DATAINGESTION_MAPPING_TABLE.replace(DATA_BASE_PLACE_HOLDER, dataBaseName));
 		logger.info("data ingestion mapping table create successfully");
-		
+
 	}
 
-	private static void createDataIngestionTableData(Statement statement, String dataBaseName) throws SQLException {
+	private static void createDataIngestionTableMetaData(Statement statement, String dataBaseName) throws SQLException {
 		// TODO Auto-generated method stub
-		statement.executeUpdate(CREATE_DATAINGESTION_TABLEDATA.replace(DATA_BASE_PLACE_HOLDER, dataBaseName));
+		statement.executeUpdate(CREATE_DATAINGESTION_TABLEMETADATA.replace(DATA_BASE_PLACE_HOLDER, dataBaseName));
 		logger.info("data ingestion table data create successfully");
-		
+
 	}
 
 	private static void createDataIngestion(Statement statement, String dataBaseName) throws SQLException {
@@ -134,9 +329,9 @@ public class InvestorDatabase extends InvestorDatabaseTables
 
 	private static void createanalystLineItem(Statement statement, String dataBaseName) throws SQLException {
 		// TODO Auto-generated method stub
-		statement.executeUpdate(CREATE_ANALYST_LINE_ITEM.replace(DATA_BASE_PLACE_HOLDER,dataBaseName));
+		statement.executeUpdate(CREATE_ANALYST_LINE_ITEM.replace(DATA_BASE_PLACE_HOLDER, dataBaseName));
 		logger.info("Analyst LineItem table create successfully");
-		
+
 	}
 
 	private static void createfinancialRatioTable(Statement statement, String dataBaseName) throws SQLException {
@@ -186,12 +381,13 @@ public class InvestorDatabase extends InvestorDatabaseTables
 	private static void createUserTable(Statement statement, String dataBaseName) throws SQLException {
 		// TODO Auto-generated method stub
 		System.out.println(statement.toString());
-		
+
 //		String query = "CREATE TABLE InvestorDB.dbo.user1(id uniqueidentifier NOT NULL,firstName varchar(255) NOT NULL,lastName varchar(255) NOT NULL,email varchar(255) NOT NULL,mobileNumber varchar(255) NOT NULL,domain varchar(255) NOT NULL,assignedName varchar(255) NOT NULL,role varchar(255) NOT NULL,status varchar(255) NOT NULL,createdOn bigint NOT NULL,CONSTRAINT PK_id PRIMARY KEY CLUSTERED(id))";
 //		statement.executeUpdate(query);
-		
+
 		statement.executeUpdate(CREATE_USER_TABLE.replace(DATA_BASE_PLACE_HOLDER, dataBaseName));
-		//statement.ex(CREATE_USER_TABLE.replace(DATA_BASE_PLACE_HOLDER, dataBaseName));
+		// statement.ex(CREATE_USER_TABLE.replace(DATA_BASE_PLACE_HOLDER,
+		// dataBaseName));
 		logger.info("user table create successfully");
 	}
 
@@ -199,6 +395,6 @@ public class InvestorDatabase extends InvestorDatabaseTables
 		// TODO Auto-generated method stub
 		System.out.println("welcome tables");
 		statement.executeUpdate(CREATE_ROLEMODEL_TABLE.replace(DATA_BASE_PLACE_HOLDER, dataBaseName));
-		logger.info("roleModel table create successfully");  
-}
+		logger.info("roleModel table create successfully");
+	}
 }

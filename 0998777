@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "winter-monolith-391712",
+  "private_key_id": "f98510b71f90ebe0041d88d0f97a8be02d2a2818",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDhOIyfqxf9GsBN\nvfq1DceTNAtNaxC0XtxasFOB5afQI/+C1RG13xdAVIuZk4bmbffAVZ44dNNZvmS9\nV1PyIk2YXiQ0l0zT1deOMHUnUpbYdbf/nxBXjY2KMt4gJ6F7G2Z5bVnAgg/9y9/1\nGd8l56drgYycZ9b6W2YBNGv9VJAxTHNqU7k4pxm+LoR1+yI0bLzYYXd/5t66wla+\nXcD0OUtYaxns9brp8sNgfFtgxe5pS+5qIormZyDG9HOPX4Vk15pIQ8n8gH606/fx\n0f7oPWKs59EKZ+o73YF0IgqMk2LtFK4sxqSLlp7/H5vtUk/ujersmnWpHPnk2USI\nUjmufbQdAgMBAAECggEAB01K1wT4Q1lrLx6ke9tAukexwUIGvB7m7r1+VC9PTOLl\n5VRctEa/Sypt+/TDAmbULpCKWJwYdvWeFPG5g/McnxEYBB+hFmRG15tkch5uApRz\nnznOfsJ5nxVZQiN7XbqhMR2ljzfjuLH9GOq6UQgT5dsKCfPVVx1SxfPwycugAOEc\nlLJLsIZXw+df0Iq3BriyU1nfhvtpn1Vu2XBjqJg5hMsbhOR2s0o/UpmNdjal9UtQ\nZpKoWWaBSQY2MODuCbwlgPksoqWv3LVOxBqbXK1frrEP3bPGCkxmcFi+XbSSnDqS\nX0bANAD1yN6dWCvSNeEk71zEgioR4N9GlpEL68EhdwKBgQD3r0Ck/4pEo6LL1Itd\nxOownz2Uy0oo2RKlnHrJPg+tFEdYFYjio3vUfyJDqEwbh5v40qHT2ZD4ljWiMmHK\niMfzrqWgGFEMRBbsRXio7QIM4ECR8XuF+rA2rpUEhWROoU0tzzC292/cSjKc7S6o\nFzGWueHOVs7GIjPl+tyhhqOCnwKBgQDoyDsKlsIbwRrfFVQtW57j01wmAQOZR8Ea\n/etoKIgu+yEPcOV9DnR77Hoo0qrojLJue+nwthtGRezF9Uiyiy2CpbjazHi+EJ1p\nV42T7UmhF9+6jT3EBWYbA3lm+tMYgJ1oB3XJlX3RUHSOcZ9n2W9aZMHpcuvJ2IVV\nlkXVQ6+rwwKBgQD3J81VGJ5r8fIAfd54OogK7swvj1A4RKyD0AsCh8hyyNqMfiiz\nJ7noiNizNNyFWCP+/oh3cxJjzNhGOwo0ZZtJggxKHhm6KLPLH2PRBXhXSuuD9rlx\nL3/pgPq4oTc/81uli6ur2GuqIewxhchZ+ZMFOgWmth7tvbGWG2dQU58UNwKBgQCp\nxWayCVOWFFb5vj9/OSP/uqWpHfI290sR2YC3nV/9C7CH52mntEQmIUjSvxpgskRs\nKblrkhUAQn01vvd/J9xQPXc9NAUXcVyseGtMKLIbaCMGln4mmV1ndDg1b9dHNn4W\nYeJ426tAXjIztRByF/WLcpKuJN9sfZp42jkiGdRkKwKBgC20TnuYe2sSvSYtfXcf\niEMiRleYdtmy28lpV4QBNJv414Ikts4CcgWNSxIndc3f+j3N+SXfWEW30fDkZSh7\nTv6JeVXlfUo1UGXM70zKs7O1itjrNXI1pCWYO8C5ql36f2VdpYY7HDXPODGWxv9w\nNtLb/DrA2yDTwjPfWMI5iqFL\n-----END PRIVATE KEY-----\n",
+  "client_email": "speech-to-text@winter-monolith-391712.iam.gserviceaccount.com",
+  "client_id": "107216877248143166054",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/speech-to-text%40winter-monolith-391712.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

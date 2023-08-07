@@ -34,18 +34,17 @@ public class RoleModelServiceImpl implements RoleModelService {
 	}
 
 	@Override
-	public RoleModelEntity createRoleModel(RoleModelEntity rolemodel)
-			throws RoleModelServiceException{
+	public RoleModelEntity createRoleModel(RoleModelEntity rolemodel) throws RoleModelServiceException {
 		try {
 			String dataBaseName = RoleModelServiceImpl.dataBaseName();
 
-			//applyValidation(rolemodel);
+			// applyValidation(rolemodel);
 
 			RoleModelEntity createNewShareHoldercontact = this.rolemodeldao.createNewRolemodel(rolemodel, dataBaseName);
 			return createNewShareHoldercontact;
 		} catch (Exception e) {
-			
-			throw new RoleModelServiceException("Unable to create role "+ e.getMessage());
+
+			throw new RoleModelServiceException("Unable to create role " + e.getMessage());
 		}
 	}
 
@@ -78,9 +77,9 @@ public class RoleModelServiceImpl implements RoleModelService {
 
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new RoleModelServiceException("unable to get role model by id"+e.getMessage());
+			throw new RoleModelServiceException("unable to get role model by id" + e.getMessage());
 		}
-	
+
 	}
 
 	@Override
@@ -95,9 +94,9 @@ public class RoleModelServiceImpl implements RoleModelService {
 
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new RoleModelServiceException("unable to role model by role name"+e.getMessage());
+			throw new RoleModelServiceException("unable to role model by role name" + e.getMessage());
 		}
-		
+
 	}
 
 	@SuppressWarnings("unchecked")
@@ -113,9 +112,9 @@ public class RoleModelServiceImpl implements RoleModelService {
 
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new RoleModelServiceException("unable to get role model list"+e.getMessage());
+			throw new RoleModelServiceException("unable to get role model list" + e.getMessage());
 		}
-		
+
 	}
 
 	@SuppressWarnings("unchecked")
@@ -158,9 +157,9 @@ public class RoleModelServiceImpl implements RoleModelService {
 
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new RoleModelServiceException("unable to update role model details"+e.getMessage());
+			throw new RoleModelServiceException("unable to update role model details" + e.getMessage());
 		}
-	
+
 	}
 
 	@SuppressWarnings("unchecked")
@@ -184,9 +183,9 @@ public class RoleModelServiceImpl implements RoleModelService {
 
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new RoleModelServiceException("unable to delete role model"+e.getMessage());
+			throw new RoleModelServiceException("unable to delete role model" + e.getMessage());
 		}
-		
+
 	}
 
 }

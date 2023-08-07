@@ -2,7 +2,7 @@ package com.Anemoi.InvestorRelation.FinancialRatio;
 
 public class FinancialRatioServiceException extends Exception {
 
-	private static final long  SerialVertionUID=1L;
+	private static final long SerialVertionUID = 1L;
 
 	public FinancialRatioServiceException() {
 		super();
@@ -29,5 +29,5 @@ public class FinancialRatioServiceException extends Exception {
 		super(cause);
 		// TODO Auto-generated constructor stub
 	}
-	
+
 }

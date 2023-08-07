@@ -1,8 +1,7 @@
 package com.Anemoi.InvestorRelation.RoleModel;
 
-public class RoleModelServiceException extends Exception
-{
-	private static final long SerialVersionUID=1L;
+public class RoleModelServiceException extends Exception {
+	private static final long SerialVersionUID = 1L;
 
 	public RoleModelServiceException() {
 		super();
@@ -29,6 +28,5 @@ public class RoleModelServiceException extends Exception
 		super(cause);
 		// TODO Auto-generated constructor stub
 	}
-	
-	
+
 }

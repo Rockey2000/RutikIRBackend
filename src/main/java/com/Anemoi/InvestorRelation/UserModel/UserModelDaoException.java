@@ -1,8 +1,8 @@
 package com.Anemoi.InvestorRelation.UserModel;
 
-public class UserModelDaoException extends Exception{
-	
-	private static final long SerialVertionUID=1L;
+public class UserModelDaoException extends Exception {
+
+	private static final long SerialVertionUID = 1L;
 
 	public UserModelDaoException() {
 		super();
@@ -29,7 +29,5 @@ public class UserModelDaoException extends Exception{
 		super(cause);
 		// TODO Auto-generated constructor stub
 	}
-	
-	
 
 }

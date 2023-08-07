@@ -1,258 +1,304 @@
 package com.Anemoi.InvestorRelation.DataIngestion;
 
 public class DataIngestionTableModel {
-	
-	private long fieldId;
-	
-	private String tableId;
-	
-	private String tableName;
-	
-	private String col1;
 
-	private String col2;
-	
-	private String col3;
-	private String col4;
-	private String col5;
-	private String col6;
-	private String col7;
-	private String col8;
-	private String col9;
-	private String col10;
-	private String col11;
-	
-	private String col12;
-	private String col13;
-	private String col14;
-	private String col15;
-	private String col16;
-	private String col17;
-	private String col18;
-	
-	private String col19;
-	private String col20;
-	private String col21;
-	private String col22;
-	private String col23;
-	private String col24;
-	private String col25;
-	public DataIngestionTableModel(long fieldId, String tableId, String tableName, String col1, String col2,
-			String col3, String col4, String col5, String col6, String col7, String col8, String col9, String col10,
-			String col11, String col12, String col13, String col14, String col15, String col16, String col17,
-			String col18, String col19, String col20, String col21, String col22, String col23, String col24,
-			String col25) {
-		super();
-		this.fieldId = fieldId;
-		this.tableId = tableId;
-		this.tableName = tableName;
-		this.col1 = col1;
-		this.col2 = col2;
-		this.col3 = col3;
-		this.col4 = col4;
-		this.col5 = col5;
-		this.col6 = col6;
-		this.col7 = col7;
-		this.col8 = col8;
-		this.col9 = col9;
-		this.col10 = col10;
-		this.col11 = col11;
-		this.col12 = col12;
-		this.col13 = col13;
-		this.col14 = col14;
-		this.col15 = col15;
-		this.col16 = col16;
-		this.col17 = col17;
-		this.col18 = col18;
-		this.col19 = col19;
-		this.col20 = col20;
-		this.col21 = col21;
-		this.col22 = col22;
-		this.col23 = col23;
-		this.col24 = col24;
-		this.col25 = col25;
+	private long field_Id;
+
+	private String tableName;
+
+	private String masterLineItem;
+
+	private String c1;
+
+	private String c2;
+
+	private String c3;
+	private String c4;
+	private String c5;
+	private String c6;
+	private String c7;
+	private String c8;
+	private String c9;
+	private String c10;
+	private String c11;
+
+	private String c12;
+	private String c13;
+	private String c14;
+	private String c15;
+	private String c16;
+	private String c17;
+	private String c18;
+
+	private String c19;
+	private String c20;
+	private String c21;
+	private String c22;
+	private String c23;
+	private String c24;
+	private String c25;
+
+	public long getField_Id() {
+		return field_Id;
 	}
-	public DataIngestionTableModel() {
-		super();
+
+	public void setField_Id(long field_Id) {
+		this.field_Id = field_Id;
 	}
-	public long getFieldId() {
-		return fieldId;
-	}
-	public void setFieldId(long fieldId) {
-		this.fieldId = fieldId;
-	}
-	public String getTableId() {
-		return tableId;
-	}
-	public void setTableId(String tableId) {
-		this.tableId = tableId;
-	}
+
 	public String getTableName() {
 		return tableName;
 	}
+
 	public void setTableName(String tableName) {
 		this.tableName = tableName;
 	}
-	public String getCol1() {
-		return col1;
+
+	public String getMasterLineItem() {
+		return masterLineItem;
 	}
-	public void setCol1(String col1) {
-		this.col1 = col1;
+
+	public void setMasterLineItem(String masterLineItem) {
+		this.masterLineItem = masterLineItem;
 	}
-	public String getCol2() {
-		return col2;
+
+	public String getC1() {
+		return c1;
 	}
-	public void setCol2(String col2) {
-		this.col2 = col2;
+
+	public void setC1(String c1) {
+		this.c1 = c1;
 	}
-	public String getCol3() {
-		return col3;
+
+	public String getC2() {
+		return c2;
 	}
-	public void setCol3(String col3) {
-		this.col3 = col3;
+
+	public void setC2(String c2) {
+		this.c2 = c2;
 	}
-	public String getCol4() {
-		return col4;
+
+	public String getC3() {
+		return c3;
 	}
-	public void setCol4(String col4) {
-		this.col4 = col4;
+
+	public void setC3(String c3) {
+		this.c3 = c3;
 	}
-	public String getCol5() {
-		return col5;
+
+	public String getC4() {
+		return c4;
 	}
-	public void setCol5(String col5) {
-		this.col5 = col5;
+
+	public void setC4(String c4) {
+		this.c4 = c4;
 	}
-	public String getCol6() {
-		return col6;
+
+	public String getC5() {
+		return c5;
 	}
-	public void setCol6(String col6) {
-		this.col6 = col6;
+
+	public void setC5(String c5) {
+		this.c5 = c5;
 	}
-	public String getCol7() {
-		return col7;
+
+	public String getC6() {
+		return c6;
 	}
-	public void setCol7(String col7) {
-		this.col7 = col7;
+
+	public void setC6(String c6) {
+		this.c6 = c6;
 	}
-	public String getCol8() {
-		return col8;
+
+	public String getC7() {
+		return c7;
 	}
-	public void setCol8(String col8) {
-		this.col8 = col8;
+
+	public void setC7(String c7) {
+		this.c7 = c7;
 	}
-	public String getCol9() {
-		return col9;
+
+	public String getC8() {
+		return c8;
 	}
-	public void setCol9(String col9) {
-		this.col9 = col9;
+
+	public void setC8(String c8) {
+		this.c8 = c8;
 	}
-	public String getCol10() {
-		return col10;
+
+	public String getC9() {
+		return c9;
 	}
-	public void setCol10(String col10) {
-		this.col10 = col10;
+
+	public void setC9(String c9) {
+		this.c9 = c9;
 	}
-	public String getCol11() {
-		return col11;
+
+	public String getC10() {
+		return c10;
 	}
-	public void setCol11(String col11) {
-		this.col11 = col11;
+
+	public void setC10(String c10) {
+		this.c10 = c10;
 	}
-	public String getCol12() {
-		return col12;
+
+	public String getC11() {
+		return c11;
 	}
-	public void setCol12(String col12) {
-		this.col12 = col12;
+
+	public void setC11(String c11) {
+		this.c11 = c11;
 	}
-	public String getCol13() {
-		return col13;
+
+	public String getC12() {
+		return c12;
 	}
-	public void setCol13(String col13) {
-		this.col13 = col13;
+
+	public void setC12(String c12) {
+		this.c12 = c12;
 	}
-	public String getCol14() {
-		return col14;
+
+	public String getC13() {
+		return c13;
 	}
-	public void setCol14(String col14) {
-		this.col14 = col14;
+
+	public void setC13(String c13) {
+		this.c13 = c13;
 	}
-	public String getCol15() {
-		return col15;
+
+	public String getC14() {
+		return c14;
 	}
-	public void setCol15(String col15) {
-		this.col15 = col15;
+
+	public void setC14(String c14) {
+		this.c14 = c14;
 	}
-	public String getCol16() {
-		return col16;
+
+	public String getC15() {
+		return c15;
 	}
-	public void setCol16(String col16) {
-		this.col16 = col16;
+
+	public void setC15(String c15) {
+		this.c15 = c15;
 	}
-	public String getCol17() {
-		return col17;
+
+	public String getC16() {
+		return c16;
 	}
-	public void setCol17(String col17) {
-		this.col17 = col17;
+
+	public void setC16(String c16) {
+		this.c16 = c16;
 	}
-	public String getCol18() {
-		return col18;
+
+	public String getC17() {
+		return c17;
 	}
-	public void setCol18(String col18) {
-		this.col18 = col18;
+
+	public void setC17(String c17) {
+		this.c17 = c17;
 	}
-	public String getCol19() {
-		return col19;
+
+	public String getC18() {
+		return c18;
 	}
-	public void setCol19(String col19) {
-		this.col19 = col19;
+
+	public void setC18(String c18) {
+		this.c18 = c18;
 	}
-	public String getCol20() {
-		return col20;
+
+	public String getC19() {
+		return c19;
 	}
-	public void setCol20(String col20) {
-		this.col20 = col20;
+
+	public void setC19(String c19) {
+		this.c19 = c19;
 	}
-	public String getCol21() {
-		return col21;
+
+	public String getC20() {
+		return c20;
 	}
-	public void setCol21(String col21) {
-		this.col21 = col21;
+
+	public void setC20(String c20) {
+		this.c20 = c20;
 	}
-	public String getCol22() {
-		return col22;
+
+	public String getC21() {
+		return c21;
 	}
-	public void setCol22(String col22) {
-		this.col22 = col22;
+
+	public void setC21(String c21) {
+		this.c21 = c21;
 	}
-	public String getCol23() {
-		return col23;
+
+	public String getC22() {
+		return c22;
 	}
-	public void setCol23(String col23) {
-		this.col23 = col23;
+
+	public void setC22(String c22) {
+		this.c22 = c22;
 	}
-	public String getCol24() {
-		return col24;
+
+	public String getC23() {
+		return c23;
 	}
-	public void setCol24(String col24) {
-		this.col24 = col24;
+
+	public void setC23(String c23) {
+		this.c23 = c23;
 	}
-	public String getCol25() {
-		return col25;
+
+	public String getC24() {
+		return c24;
 	}
-	public void setCol25(String col25) {
-		this.col25 = col25;
+
+	public void setC24(String c24) {
+		this.c24 = c24;
 	}
-	@Override
-	public String toString() {
-		return "DataIngestionTableModel [fieldId=" + fieldId + ", tableId=" + tableId + ", tableName=" + tableName
-				+ ", col1=" + col1 + ", col2=" + col2 + ", col3=" + col3 + ", col4=" + col4 + ", col5=" + col5
-				+ ", col6=" + col6 + ", col7=" + col7 + ", col8=" + col8 + ", col9=" + col9 + ", col10=" + col10
-				+ ", col11=" + col11 + ", col12=" + col12 + ", col13=" + col13 + ", col14=" + col14 + ", col15=" + col15
-				+ ", col16=" + col16 + ", col17=" + col17 + ", col18=" + col18 + ", col19=" + col19 + ", col20=" + col20
-				+ ", col21=" + col21 + ", col22=" + col22 + ", col23=" + col23 + ", col24=" + col24 + ", col25=" + col25
-				+ "]";
+
+	public String getC25() {
+		return c25;
 	}
-	
-	
+
+	public void setC25(String c25) {
+		this.c25 = c25;
+	}
+
+	public DataIngestionTableModel(long field_Id, String tableName, String masterLineItem, String c1, String c2,
+			String c3, String c4, String c5, String c6, String c7, String c8, String c9, String c10, String c11,
+			String c12, String c13, String c14, String c15, String c16, String c17, String c18, String c19, String c20,
+			String c21, String c22, String c23, String c24, String c25) {
+		super();
+		this.field_Id = field_Id;
+		this.tableName = tableName;
+		this.masterLineItem = masterLineItem;
+		this.c1 = c1;
+		this.c2 = c2;
+		this.c3 = c3;
+		this.c4 = c4;
+		this.c5 = c5;
+		this.c6 = c6;
+		this.c7 = c7;
+		this.c8 = c8;
+		this.c9 = c9;
+		this.c10 = c10;
+		this.c11 = c11;
+		this.c12 = c12;
+		this.c13 = c13;
+		this.c14 = c14;
+		this.c15 = c15;
+		this.c16 = c16;
+		this.c17 = c17;
+		this.c18 = c18;
+		this.c19 = c19;
+		this.c20 = c20;
+		this.c21 = c21;
+		this.c22 = c22;
+		this.c23 = c23;
+		this.c24 = c24;
+		this.c25 = c25;
+	}
+
+	public DataIngestionTableModel() {
+		super();
+	}
+
 }

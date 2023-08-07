@@ -1,7 +1,7 @@
 package com.Anemoi.InvestorRelation.ShareHolderMeeting;
 
 public class ShareHolderMeetingServiceException extends Exception {
-	private static final long SerialVertionUID=1L;
+	private static final long SerialVertionUID = 1L;
 
 	public ShareHolderMeetingServiceException() {
 		super();
@@ -28,6 +28,5 @@ public class ShareHolderMeetingServiceException extends Exception {
 		super(cause);
 		// TODO Auto-generated constructor stub
 	}
-	
 
 }

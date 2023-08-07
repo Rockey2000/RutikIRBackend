@@ -1,26 +1,46 @@
 package com.Anemoi.InvestorRelation.DataIngestion;
 
+import java.sql.Date;
+
 public class DataIngestionMappingModel {
-	
+
 	private String mapId;
-	
+
 	private long fieldId;
-	
+
 	private String analyst;
-	
+
+	private String masterLineItem;
+
 	private String companyName;
-	
+
+	private String tableName;
+
 	private String documentType;
 
+	private String peerName;
+
+	private String currency;
+
+	private String units;
+
 	private String year;
-	
+
 	private String lineItemName;
-	
+
 	private String quarter;
-	
+
 	private String type;
-	
+
 	private String value;
+
+	private String reportType;
+
+	private Date reportDate;
+
+	private long date;
+
+	private String denomination;
 
 	public String getMapId() {
 		return mapId;
@@ -46,6 +66,14 @@ public class DataIngestionMappingModel {
 		this.analyst = analyst;
 	}
 
+	public String getMasterLineItem() {
+		return masterLineItem;
+	}
+
+	public void setMasterLineItem(String masterLineItem) {
+		this.masterLineItem = masterLineItem;
+	}
+
 	public String getCompanyName() {
 		return companyName;
 	}
@@ -54,12 +82,44 @@ public class DataIngestionMappingModel {
 		this.companyName = companyName;
 	}
 
+	public String getTableName() {
+		return tableName;
+	}
+
+	public void setTableName(String tableName) {
+		this.tableName = tableName;
+	}
+
 	public String getDocumentType() {
 		return documentType;
 	}
 
 	public void setDocumentType(String documentType) {
 		this.documentType = documentType;
+	}
+
+	public String getPeerName() {
+		return peerName;
+	}
+
+	public void setPeerName(String peerName) {
+		this.peerName = peerName;
+	}
+
+	public String getCurrency() {
+		return currency;
+	}
+
+	public void setCurrency(String currency) {
+		this.currency = currency;
+	}
+
+	public String getUnits() {
+		return units;
+	}
+
+	public void setUnits(String units) {
+		this.units = units;
 	}
 
 	public String getYear() {
@@ -102,32 +162,67 @@ public class DataIngestionMappingModel {
 		this.value = value;
 	}
 
-	public DataIngestionMappingModel(String mapId, long fieldId, String analyst, String companyName,
-			String documentType, String year, String lineItemName, String quarter, String type, String value) {
+	public String getReportType() {
+		return reportType;
+	}
+
+	public void setReportType(String reportType) {
+		this.reportType = reportType;
+	}
+
+	public Date getReportDate() {
+		return reportDate;
+	}
+
+	public void setReportDate(Date reportDate) {
+		this.reportDate = reportDate;
+	}
+
+	public long getDate() {
+		return date;
+	}
+
+	public void setDate(long date) {
+		this.date = date;
+	}
+
+	public String getDenomination() {
+		return denomination;
+	}
+
+	public void setDenomination(String denomination) {
+		this.denomination = denomination;
+	}
+
+	public DataIngestionMappingModel(String mapId, long fieldId, String analyst, String masterLineItem,
+			String companyName, String tableName, String documentType, String peerName, String currency, String units,
+			String year, String lineItemName, String quarter, String type, String value, String reportType,
+			Date reportDate, long date, String denomination) {
 		super();
 		this.mapId = mapId;
 		this.fieldId = fieldId;
 		this.analyst = analyst;
+		this.masterLineItem = masterLineItem;
 		this.companyName = companyName;
+		this.tableName = tableName;
 		this.documentType = documentType;
+		this.peerName = peerName;
+		this.currency = currency;
+		this.units = units;
 		this.year = year;
 		this.lineItemName = lineItemName;
 		this.quarter = quarter;
 		this.type = type;
 		this.value = value;
+		this.denomination = denomination;
+		this.reportType = reportType;
+		this.reportDate = reportDate;
+		this.date = date;
+		this.denomination = denomination;
 	}
 
 	public DataIngestionMappingModel() {
 		super();
 	}
 
-	@Override
-	public String toString() {
-		return "DataIngestionMappingModel [mapId=" + mapId + ", fieldId=" + fieldId + ", analyst=" + analyst
-				+ ", companyName=" + companyName + ", documentType=" + documentType + ", year=" + year
-				+ ", lineItemName=" + lineItemName + ", quarter=" + quarter + ", type=" + type + ", value=" + value
-				+ "]";
-	}
-	
-	
-	}
+}

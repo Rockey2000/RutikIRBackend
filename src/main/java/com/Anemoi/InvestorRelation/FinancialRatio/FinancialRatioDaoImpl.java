@@ -12,55 +12,76 @@ import java.util.UUID;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-
+import com.Anemoi.InvestorRelation.AnalystLineItem.AnalystLineItemDaoException;
+import com.Anemoi.InvestorRelation.AnalystLineItem.AnalystLineItemQueryConstant;
 import com.Anemoi.InvestorRelation.Configuration.InvestorDatabaseUtill;
 
 import jakarta.inject.Singleton;
 
 @Singleton
 public class FinancialRatioDaoImpl implements FinancialRatioDao {
-	
-	private static final Logger LOGGER =LoggerFactory.getLogger(FinancialRatioDaoImpl.class);
 
+	private static final Logger LOGGER = LoggerFactory.getLogger(FinancialRatioDaoImpl.class);
+
+	@SuppressWarnings("resource")
 	@Override
-	public FinancialRatioEntity createNewFinancialRatio(FinancialRatioEntity financialratioEntity, String dataBaseName)  throws FinancialRatioDaoException{
+	public FinancialRatioEntity createNewFinancialRatio(FinancialRatioEntity financialratioEntity, String dataBaseName)
+			throws FinancialRatioDaoException {
 
-		Connection connection=null;
-		PreparedStatement pstmt=null;
-		
-		try
-		{
-			connection=InvestorDatabaseUtill.getConnection();
-			LOGGER.debug("inserting the data");
-			
-			pstmt=connection.prepareStatement(FinancialRatioQuaryConstant.INSERT_INTO_FINANCIALRATIO
-					.replace(FinancialRatioQuaryConstant.DATA_BASE_PLACE_HOLDER,dataBaseName));
+		Connection connection = null;
+		PreparedStatement pstmt = null;
+		ResultSet result=null;
+		List<String> existingValues = new ArrayList<>();
+
+		try {
+			connection = InvestorDatabaseUtill.getConnection();
+		String clientName=	financialratioEntity.getClientName();
+			pstmt = connection.prepareStatement(FinancialRatioQuaryConstant.SELECT__FORMULANAME
+					.replace(FinancialRatioQuaryConstant.DATA_BASE_PLACE_HOLDER, dataBaseName));
+			pstmt.setString(1, clientName);
+			result = pstmt.executeQuery();
+			while (result.next()) {
+				existingValues.add(result.getString("formulaName"));
+			}
+			boolean isMatched = existingValues.stream().anyMatch(financialratioEntity.getFormulaName()::equalsIgnoreCase);
+			System.out.println("value" + existingValues);
+			if (isMatched == false && !existingValues.contains(financialratioEntity.getFormulaName()))
+			{
+
+              Date d=new Date();
+			pstmt = connection.prepareStatement(FinancialRatioQuaryConstant.INSERT_INTO_FINANCIALRATIO
+					.replace(FinancialRatioQuaryConstant.DATA_BASE_PLACE_HOLDER, dataBaseName));
 			String financialid = UUID.randomUUID().toString();
-			
 			financialratioEntity.setFinancialid(financialid);
-			String id = financialratioEntity.getFinancialid();
-			System.out.println(id+" "+financialratioEntity);
-			pstmt.setString(1, id);
-			pstmt.setString(2, financialratioEntity.getLineItem());
-			pstmt.setString(3, financialratioEntity.getFormulaType());
-			pstmt.setString(4, financialratioEntity.getFormula());	
+			pstmt.setString(1, financialratioEntity.getFinancialid());
+			pstmt.setString(2, financialratioEntity.getClientName());
+			pstmt.setString(3, financialratioEntity.getFormulaName());
+			pstmt.setString(4, financialratioEntity.getFormula());
+			pstmt.setString(5, financialratioEntity.getCreatedBy());
+			pstmt.setLong(6, d.getTime());
 			pstmt.executeUpdate();
 			return financialratioEntity;
+			}
+			else
+			{
+				throw new FinancialRatioDaoException("Cannot insert Duplicate formula name for same client");
+			}
 
 		} catch (Exception e) {
 			LOGGER.error("unable to  created :");
 			e.printStackTrace();
-			throw new FinancialRatioDaoException("unable to create finacial ratio "+e.getMessage());
-			
+			throw new FinancialRatioDaoException( e.getMessage());
+
 		} finally {
 			LOGGER.info("closing the connections");
 			InvestorDatabaseUtill.close(pstmt, connection);
 		}
-		
+
 	}
 
 	@Override
-	public FinancialRatioEntity getFianancialRatioById(String financialid, String dataBaseName) throws FinancialRatioDaoException {
+	public FinancialRatioEntity getFianancialRatioById(String financialid, String dataBaseName)
+			throws FinancialRatioDaoException {
 		Connection connection = null;
 		PreparedStatement pstmt = null;
 		ResultSet result = null;
@@ -77,37 +98,38 @@ public class FinancialRatioDaoImpl implements FinancialRatioDao {
 			}
 		} catch (Exception e) {
 			LOGGER.error("financial ratio Data not found" + e.getMessage());
-			throw new FinancialRatioDaoException("unable to get finacial ratio entity"+e.getMessage());
-			
+			throw new FinancialRatioDaoException("unable to get finacial ratio entity" + e.getMessage());
+
 		} finally {
 			LOGGER.debug("closing the connections");
 			InvestorDatabaseUtill.close(result, pstmt, connection);
 		}
 		return null;
 	}
-	
-	private FinancialRatioEntity buildfinancialratioDeatils(ResultSet result) throws SQLException {
 
+	private FinancialRatioEntity buildfinancialratioDeatils(ResultSet result) throws SQLException {
 
 		FinancialRatioEntity financialratioEntity = new FinancialRatioEntity();
 		financialratioEntity.setFinancialid(result.getString(FinancialRatioQuaryConstant.FINANCIALID));
-		financialratioEntity.setLineItem(result.getString(FinancialRatioQuaryConstant.LINEITEM));
-		financialratioEntity.setFormulaType(result.getString(FinancialRatioQuaryConstant.FORMULATYPE));
+		financialratioEntity.setClientName(result.getString(FinancialRatioQuaryConstant.CLIENTNAME));
+		financialratioEntity.setFormulaName(result.getString(FinancialRatioQuaryConstant.FORMULANAME));
 		financialratioEntity.setFormula(result.getString(FinancialRatioQuaryConstant.FORMULA));
-
+		financialratioEntity.setCreatedBy(result.getString(FinancialRatioQuaryConstant.CREATEDBY));
+		financialratioEntity.setCreatedOn(result.getLong("createdOn"));
 		return financialratioEntity;
 	}
 
 	@Override
-	public List<FinancialRatioEntity> getAllFinancialRatioDetails(String dataBaseName) throws FinancialRatioDaoException {
+	public List<FinancialRatioEntity> getAllFinancialRatioDetails(String dataBaseName)
+			throws FinancialRatioDaoException {
 		Connection connection = null;
 		PreparedStatement pstmt = null;
 		ResultSet result = null;
 		List<FinancialRatioEntity> listOffinancialratioDetails = new ArrayList<>();
 		try {
 			connection = InvestorDatabaseUtill.getConnection();
-			pstmt = connection.prepareStatement(
-					FinancialRatioQuaryConstant.SELECT_FINANCIALRATIO.replace(FinancialRatioQuaryConstant.DATA_BASE_PLACE_HOLDER, dataBaseName));
+			pstmt = connection.prepareStatement(FinancialRatioQuaryConstant.SELECT_FINANCIALRATIO
+					.replace(FinancialRatioQuaryConstant.DATA_BASE_PLACE_HOLDER, dataBaseName));
 			result = pstmt.executeQuery();
 			while (result.next()) {
 				FinancialRatioEntity financialratio = buildfinancialratioDeatils(result);
@@ -117,52 +139,16 @@ public class FinancialRatioDaoImpl implements FinancialRatioDao {
 		} catch (Exception e) {
 			LOGGER.error("unble to get list of fiancial Ratio" + e.getMessage());
 			e.printStackTrace();
-			throw new FinancialRatioDaoException("unable to get finacial ratio "+e.getMessage());
+			throw new FinancialRatioDaoException( e.getMessage());
 
 		} finally {
 			LOGGER.debug("closing the connections");
 			InvestorDatabaseUtill.close(result, pstmt, connection);
 		}
-		
 
 	}
 
-	@Override
-	public FinancialRatioEntity updateFinancialRatioDetails(FinancialRatioEntity financialratioEntity,
-			String financialid, String dataBaseName) throws FinancialRatioDaoException{
-		Connection connection = null;
-		PreparedStatement pstmt = null;
-		LOGGER.info(".in update financial ratio database name is ::" + dataBaseName + " financialId is ::" + financialid + " request financial ratio is ::"
-				+ financialratioEntity);
-
-		try {
-
-			connection = InvestorDatabaseUtill.getConnection();
-			pstmt = connection.prepareStatement(
-					FinancialRatioQuaryConstant.UPDATE_FINANCIALRATIO.replace(FinancialRatioQuaryConstant.DATA_BASE_PLACE_HOLDER, dataBaseName));
-			Date date = new Date();
-			pstmt.setString(1, financialratioEntity.getLineItem());
-			pstmt.setString(2, financialratioEntity.getFormulaType());
-			pstmt.setString(3, financialratioEntity.getFormula());
-			
-			
-			pstmt.setString(4, financialid);
-
-			int executeUpdate = pstmt.executeUpdate();
-
-			System.out.println(executeUpdate);
-			LOGGER.info(executeUpdate + " financial ratio updated successfully");
-		} catch (Exception e) {
-			e.printStackTrace();
-			throw new FinancialRatioDaoException("can not update "+e.getMessage());
-			
-		} finally {
-			LOGGER.debug("closing the connections");
-			InvestorDatabaseUtill.close(pstmt, connection);
-		}
-		return financialratioEntity;
-	}
-
+	
 	@Override
 	public String deleteFinancialRatio(String financialid, String dataBaseName) throws FinancialRatioDaoException {
 		Connection connection = null;
@@ -177,7 +163,7 @@ public class FinancialRatioDaoImpl implements FinancialRatioDao {
 			LOGGER.info(executeUpdate + " financial ratio deleted successfully");
 		} catch (Exception e) {
 			e.printStackTrace();
-		
+
 		} finally {
 			LOGGER.debug("closing the connections");
 			InvestorDatabaseUtill.close(pstmt, connection);
@@ -185,6 +171,5 @@ public class FinancialRatioDaoImpl implements FinancialRatioDao {
 		return null;
 
 	}
-
 
 }

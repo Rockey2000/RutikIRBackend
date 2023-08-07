@@ -1,136 +1,209 @@
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\IncomeStatement\IncomeStatementServiceImpl.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\AnalystDetails\AnalystDetailsDaoException.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\RoleModel\RoleModelControllerException.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\CashFlow\CashFlowController.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderContact\ShareHolderContactDaoException.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\UserModel\UserServiceImpl.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\BalanceSheet\BalanceSheetDaoException.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\FinancialRatio\FinancialRatioServiceImpl.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderDataFrom\ShareHolderDataFromQuaryConstant.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\DataIngestion\DataIngestionModel.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\GlobalExeption\Error.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\Application.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderMeeting\ShareHolderMeetingDaoImpl.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\Configuration\ReadPropertiesFile.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\AnalystDetails\AnalystDetailsDaoImpl.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\AnalystDetails\AnalystDetailsQueryConstant.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\IncomeStatement\IncomeStatementController.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\CashFlow\CashFlowDaoException.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\FinancialRatio\FinancialRatioService.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\MailSession\PropertiesUtil.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\AnalystLineItem\AnalystLineItemDao.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\CashFlow\CashFlowServiceImpl.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderMeeting\ShareHolderMeetingDao.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\AnalystLineItem\AnalystLineItemControllerException.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderMeeting\ShareHolderMeetingServiceImpl.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\UserModel\UserEntity.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\AnalystDetails\AnalystDetailsDao.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\RoleModel\RoleModelEntity.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\FinancialRatio\FinancialRatioDaoException.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderContact\ShareHolderContactQuaryConstant.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\AnalystLineItem\AnalystLineItemDaoException.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\DataIngestion\DataIngestionService.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\IncomeStatement\IncomeStatementDao.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\RoleModel\RoleModelServiceImpl.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\UserModel\UserModelServiceException.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderContact\ShareHolderContactEntity.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\UserModel\UserController.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\Configuration\InvestorDatabaseTables.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\FinancialRatio\FinancialRatioController.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\CashFlow\CashFlowControllerException.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\RoleModel\RoleModelController.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\GlobalExeption\GlobalExceptionHandler.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\IncomeStatement\IncomeStatementQuaryConstatnt.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\RoleModel\RoleModelDao.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderContact\ShareHolderContactControllerException.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\FinancialRatio\FinancialRatioControllerException.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\DataIngestion\DataIngestionServiceImpl.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\MailSession\MailSessionInstance.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\AnalystLineItem\AnalystLineItemController.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\BalanceSheet\BalanceSheetServiceException.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\CashFlow\CashFlowService.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderContact\ShareHolderContactServiceException.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\FinancialRatio\FinancialRatioDao.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\AnalystDetails\AnalystDetailsServiceException.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\CashFlow\CashFlowDaoImpl.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\MailSession\MailServiceConstant.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\RoleModel\RoleModelServiceException.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\UserModel\UserDao.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\AnalystDetails\AnalystDetailsControllerException.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\AnalystDetails\AnalystDetailsServiceImpl.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderMeeting\ShareHolderMeetingDaoException.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\FinancialRatio\FinancialRatioQuaryConstant.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\BalanceSheet\BalanceSheetQueryConstant.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\CashFlow\CashFlowEntity.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\IncomeStatement\IncomeStatementEntity.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\IncomeStatement\IncomeStatementDaoException.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderDataFrom\ShareHolderDataFromEntity.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\AnalystLineItem\AnalystLineItemServiceImpl.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\DataIngestion\DataIngestionTableModel.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderDataFrom\ShareHolderDataFromDaoImpl.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\AnalystLineItem\AnalystLineItemDaoImpl.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderMeeting\ShareHolderMeetingServiceException.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\RoleModel\RoleModelService.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\RoleModel\RoleModelDaoException.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\Configuration\ReadProperties.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\FinancialRatio\FinancialRatioEntity.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderDataFrom\ShareHoderDataFromDao.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderDataFrom\ShareHolderDataFromServiceException.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\DataIngestion\DataIngestionControllerException.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\DataIngestion\DataIngestionDao.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\AnalystDetails\AnalystDetailsEntity.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\AnalystLineItem\AnalystLineItemServiceException.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderContact\ShareHolderContactDao.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\BalanceSheet\BalanceSheetControllerException.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\DataIngestion\DataIngestionDaoImpl.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\UserModel\UserQueryConstant.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\UserModel\UserModelControllerException.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\UserModel\UserModelDaoException.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderMeeting\ShareHolderMeetingEntity.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\Configuration\InvestorDatabaseUtill.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\FinancialRatio\FinancialRatioDaoImpl.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\GlobalExeption\GlobalException.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderDataFrom\ShareHolderDataFromServiceImpl.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\BalanceSheet\BalanceSheetDao.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderContact\ShareHolderContactServiceImpl.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\CashFlow\CashFlowServiceException.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\AnalystDetails\AnalystDetailsService.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\DataIngestion\DataIngestionMappingModel.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\CashFlow\CashFlowQuaryConstant.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderContact\ShareHolderContactController.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\MailSession\MailService.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\BalanceSheet\BalanceSheetServiceImpl.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\DataIngestion\DataIngestionServiceException.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderDataFrom\ShareHoderDataFromService.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderDataFrom\ShareHolderDataFormControllerException.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\AnalystLineItem\AnalystLineItemService.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\CashFlow\CashFlowDao.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\Configuration\InvestorDatabase.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\RoleModel\RoleMoldeDaoImpl.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderMeeting\ShareHolderMeetingService.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\RoleModel\RoleModelQuaryContant.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderMeeting\ShareHolderMeetingControllerExcetion.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\AnalystLineItem\AnalystLineItemQueryConstant.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\DataIngestion\DataIngestionController.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\DataIngestion\DataIngestionQueryConstant.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\MailSession\MailServiceImpl.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\UserModel\UserDaoImpl.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderDataFrom\ShareHolderDataFormDaoException.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\BalanceSheet\BalanceSheetEntity.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderDataFrom\ShareHolderDataFromController.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\BalanceSheet\BalanceSheetController.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\BalanceSheet\BalanceSheetService.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\DataIngestion\DataIngestionDaoException.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\UserModel\UserService.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\IncomeStatement\IncomeStatementServiceException.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderContact\ShareHolderContactDaoImpl.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderMeeting\ShareHolderMeetingQuaryContant.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\AnalystLineItem\AnalystLineItemEntity.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\FinancialRatio\FinancialRatioServiceException.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\IncomeStatement\IncomeStatementControllerException.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderMeeting\ShareHolderMeetingController.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\IncomeStatement\IncomeStatementService.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderContact\ShareHolderContactService.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\BalanceSheet\BalanceSheetDaoImpl.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\IncomeStatement\IncomeStatementDaoImpl.java
-E:\company repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\AnalystDetails\AnalystDetailsController.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\GlobalExeption\GlobalExceptionHandler.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\FinancialRatio\FinancialRatioService.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\MeetingScheduler\DaoException.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderDataFrom\ShareHoderDataFromDao.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderContact\ShareHolderContactEntity.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ClientDetails\ClientDetailsControllerException.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderContact\ShareHolderContactServiceImpl.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\DataIngestion\FiledData.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ReportTableHeader\ReportTableHeaderServiceImpl.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\UserModel\UserQueryConstant.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\RoleModel\RoleModelServiceException.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderDataFrom\ShareHolderDataFromServiceImpl.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\MeetingScheduler\ServiceException.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\AnalystLineItem\AnalystLineItemDaoException.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\FinancialRatio\FinancialRatioQuaryConstant.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderMeeting\LocalFilePropertiesConfig.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\AnalystDetails\Analyst.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\BalanceSheet\BalanceSheetDao.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderContact\ShareHolderContactDaoException.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\Resource\ResourceSerice.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\whitelabeling\DaoException.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ClientLineItem\ClientLineItemControllerException.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\IncomeStatement\IncomeStatementDaoException.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\Resource\ResourceController.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\BalanceSheet\BalanceSheetServiceImpl.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ClientLineItem\ClientLineItemService.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\FinancialRatio\FinancialRatioServiceImpl.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\AnalystDetails\AnalystDetailsServiceImpl.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\AnalystLineItem\AnalystLineItemController.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\DataIngestion\KeywordList.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\whitelabeling\WhiteLableingEntity.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\AnalystDetails\ExcelData.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\MeetingScheduler\MeetingDaoImpl.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ReportTableHeader\ReportTableHeaderDao.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\UserModel\UserDao.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\DataIngestion\DataIngestionModel.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderMeeting\ShareHolderMeetingDao.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\AnalystLineItem\AnalystLineItemDaoImpl.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\BalanceSheet\BalanceSheetDaoException.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderMeeting\ShareHolderMeetingServiceImpl.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\AnalystLineItem\AnalystLineItemService.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\AnalystDetails\AnalystDetailsEntity.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\FinancialRatio\FinancialRatioDaoException.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\MeetingScheduler\MeetingDao.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\whitelabeling\WhiteLableingController.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\AnalystLineItem\AnalystLineItemEntity.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderDataFrom\ShareHolderDataFormDaoException.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\CashFlow\CashFlowServiceImpl.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ReportTableHeader\ReportTableHeaderController.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderMeeting\ShareHolderMeetingDaoException.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderContact\ShareHolderContactController.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ReportTableHeader\ReportTableHeaderServiceException.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\AnalystDetails\AnalystDetailsController.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\IncomeStatement\IncomeStatementControllerException.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderMeeting\ShareHolderMeetingDaoImpl.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\IncomeStatement\IncomeStatementController.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\RoleModel\RoleModelQuaryContant.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ReportTableHeader\ReportTableHeaderDaoImpl.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\DataIngestion\TableList.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\UserModel\UserController.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\MeetingScheduler\ServiceInterface.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\AnalystDetails\AnalystDetailsService.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\RoleModel\RoleModelControllerException.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ReportTableHeader\ReportTableHeaderDaoException.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\GlobalExeption\GlobalException.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderDataFrom\ShareHolderDataFormControllerException.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ClientDetails\ClientDetailsDao.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\IncomeStatement\IncomeStatementDao.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\whitelabeling\ServiceException.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\IncomeStatement\IncomeStatementServiceImpl.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ClientDetails\ClientDetailsQueryConstant.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderMeeting\ShareHolderMeetingService.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\RoleModel\RoleModelServiceImpl.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\BalanceSheet\BalanceSheetServiceException.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\UserModel\UserEntity.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\whitelabeling\WhitelableingService.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderMeeting\ShareHolderMeetingControllerExcetion.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\CashFlow\CashFlowService.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderContact\ShareHolderContactControllerException.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\AnalystLineItem\AnalystLineItemServiceException.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\AnalystDetails\AnalystDetailsQueryConstant.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ReportTableHeader\ReportTableHeaderService.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\FinancialRatio\FinancialRatioEntity.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderDataFrom\ShareHolderDataFromEntity.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\MailSession\MailSessionInstance.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\BalanceSheet\BalanceSheetEntity.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\UserModel\UserDaoImpl.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\MailSession\MailServiceConstant.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\AnalystDetails\AnalystDetailsDaoException.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ClientDetails\ClientDetailsEntity.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\AnalystDetails\ExcelToJsonController.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderMeeting\MediaService.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderMeeting\MediaServiceInterface.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderContact\ShareHolderContactDao.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\FinancialRatio\FinancialRatioController.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\Configuration\InvestorDatabaseTables.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\DataIngestion\DataIngestionServiceException.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderContact\ShareHolderContactServiceException.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\AnalystLineItem\AnalystLineItemServiceImpl.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\DataIngestion\DataIngestionDaoImpl.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\UserModel\UserService.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\AnalystLineItem\AnalystDetails.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\MailSession\MailServiceImpl.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\whitelabeling\WhiteLableingQueryConstant.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\BalanceSheet\BalanceSheetService.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\UserModel\UserModelControllerException.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\IncomeStatement\IncomeStatementService.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\CashFlow\CashFlowDao.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\CashFlow\CashFlowDaoImpl.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\DataIngestion\DataIngestionController.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\BalanceSheet\BalanceSheetController.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\DataIngestion\DataIngestionMappingModel.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderMeeting\LocalRepoConfiguration.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\BalanceSheet\BalanceSheetControllerException.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\Resource\ResourceServiceImpl.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\DataIngestion\DataIngestionQueryConstant.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\MeetingScheduler\ControllerException.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\whitelabeling\WhitelableingDaoImpl.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\AnalystDetails\AnalystDetailsDaoImpl.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ReportTableHeader\ReportTableHeaderControllerException.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\RoleModel\RoleModelService.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderContact\ShareHolderContactQuaryConstant.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\FinancialRatio\FinancialRatioControllerException.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\CashFlow\CashFlowQuaryConstant.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ClientLineItem\ClientLineItemDao.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderMeeting\ShareHolderMeetingEntity.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\Configuration\ReadPropertiesFile.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\RoleModel\RoleModelDaoException.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ClientDetails\ClientServiceException.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\IncomeStatement\IncomeStatementEntity.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ClientLineItem\ClientDetails.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\DataIngestion\ExtractFilePojo.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\DataIngestion\DataIngestionControllerException.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\DataIngestion\DataIngestionTableModel.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\IncomeStatement\IncomeStatementDaoImpl.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\AnalystDetails\AnalystContactDetails.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\GlobalExeption\Error.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\RoleModel\RoleMoldeDaoImpl.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\Application.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\FinancialRatio\FinancialRatioDao.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\CashFlow\CashFlowServiceException.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderDataFrom\ShareHolderDataFromQuaryConstant.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\MailSession\PropertiesUtil.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\RoleModel\RoleModelController.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\DataIngestion\DataIngestionDao.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\FinancialRatio\FinancialRatioServiceException.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\AnalystLineItem\AnalystLineItemControllerException.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderMeeting\MediaController.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\AnalystDetails\AnalystDetailsControllerException.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ClientLineItem\ClientLineItemController.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\MeetingScheduler\MSTeamschedule.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ClientDetails\ClientDetailsServiceImpl.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\RoleModel\RoleModelDao.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ClientLineItem\ClientLineItemEntity.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ClientDetails\ClientDetailsDaoImpl.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\whitelabeling\WhiteLableingDao.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ClientDetails\ClientDetailsService.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderDataFrom\ShareHoderDataFromService.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\BalanceSheet\BalanceSheetQueryConstant.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\RoleModel\RoleModelEntity.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\MailSession\MailService.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ClientLineItem\ClientLineItemServiceException.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ClientLineItem\ClientLineItemDaoImpl.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\Configuration\InvestorDatabaseUtill.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\AnalystDetails\AnalystDetailsDao.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\IncomeStatement\IncomeStatementServiceException.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\AnalystLineItem\AnalystLineItemDao.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\DataIngestion\WeightedWord.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderDataFrom\ShareHolderDataFromController.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\UserModel\UserServiceImpl.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\config\Config.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\DataIngestion\DataIngestionServiceImpl.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderMeeting\ShareHolderMeetingServiceException.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ClientDetails\ClientDetailsController.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\DataIngestion\DataIngestionDaoException.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\FinancialRatio\FinancialRatioDaoImpl.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\MeetingScheduler\ServiceImp.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\UserModel\UserModelDaoException.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderMeeting\ShareHolderMeetingController.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ReportTableHeader\ReportTableHeaderEntity.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderMeeting\ShareHolderMeetingQuaryContant.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ClientLineItem\ClientLineItemQueryConstant.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\whitelabeling\ControllerException.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\CashFlow\CashFlowDaoException.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\BalanceSheet\BalanceSheetDaoImpl.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\MeetingScheduler\MeetingShedularQueryConstant.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\UserModel\UserModelServiceException.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\DataIngestion\FinacialDateData.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\Configuration\InvestorDatabase.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\CashFlow\CashFlowEntity.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ReportTableHeader\ReportTableHeaderQueryConstant.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderDataFrom\ShareHolderDataFromDaoImpl.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\whitelabeling\WhiteLableingServiceImpl.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\CashFlow\CashFlowController.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ClientLineItem\ClientLineItemServiceimpl.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\Configuration\ReadProperties.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\AnalystDetails\AnalystDetailsServiceException.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\CashFlow\CashFlowControllerException.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ClientDetails\ClientDaoException.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\DataIngestion\DataIngestionService.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\MeetingScheduler\APIController.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderDataFrom\ShareHolderDataFromServiceException.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\Resource\Media.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\AnalystLineItem\AnalystLineItemQueryConstant.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\DataIngestion\NonProcessFilesDetails.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ClientLineItem\ClientLineItemDaoException.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\IncomeStatement\IncomeStatementQuaryConstatnt.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderContact\ShareHolderContactDaoImpl.java
+C:\IR project\phase2 working repo\ir_platform_backend\src\main\java\com\Anemoi\InvestorRelation\ShareHolderContact\ShareHolderContactService.java

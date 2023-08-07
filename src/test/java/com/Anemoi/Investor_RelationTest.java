@@ -10,12 +10,12 @@ import jakarta.inject.Inject;
 @MicronautTest
 class Investor_RelationTest {
 
-    @Inject
-    EmbeddedApplication<?> application;
+	@Inject
+	EmbeddedApplication<?> application;
 
-    @Test
-    void testItWorks() {
-        Assertions.assertTrue(application.isRunning());
-    }
+	@Test
+	void testItWorks() {
+		Assertions.assertTrue(application.isRunning());
+	}
 
 }

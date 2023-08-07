@@ -1,19 +1,19 @@
 package com.Anemoi.InvestorRelation.ShareHolderContact;
 
 public class ShareHolderContactEntity {
-	
+
 	private String contactid;
-	
+
 	private String name;
-	
+
 	private String poc;
-	
+
 	private String email;
-	
+
 	private String minorcode;
-	
+
 	private String address;
-	
+
 	private String contact;
 
 	public String getContactid() {
@@ -93,7 +93,5 @@ public class ShareHolderContactEntity {
 	public ShareHolderContactEntity() {
 		super();
 	}
-	
-	
 
 }

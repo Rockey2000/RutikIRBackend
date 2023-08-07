@@ -14,17 +14,15 @@ import org.slf4j.LoggerFactory;
 
 import com.Anemoi.InvestorRelation.Configuration.InvestorDatabaseUtill;
 
-
 import jakarta.inject.Singleton;
 
 @Singleton
-public class UserDaoImpl implements UserDao 
-   {
+public class UserDaoImpl implements UserDao {
 	private static final Logger LOGGER = LoggerFactory.getLogger(UserDaoImpl.class);
 
 	@Override
-	public UserEntity createNewUser(UserEntity user, String dataBaseName,String password) throws UserModelDaoException {
-		
+	public UserEntity createNewUser(UserEntity user, String dataBaseName) throws UserModelDaoException {
+
 		Connection connection = null;
 		PreparedStatement pstmt = null;
 
@@ -38,10 +36,10 @@ public class UserDaoImpl implements UserDao
 			String userId = UUID.randomUUID().toString();
 			user.setUserid(userId);
 			String id = user.getUserid();
-			user.setPassword(password);
-			String password1 = user.getPassword();
+//			user.setPassword(password);
+//			String password1 = user.getPassword();
 
-			System.out.println(id+" "+user);
+//			System.out.println(id+" "+user);
 			Date date = new Date();
 
 			pstmt.setString(1, id);
@@ -53,28 +51,27 @@ public class UserDaoImpl implements UserDao
 			pstmt.setString(7, user.getAssignedName());
 			pstmt.setString(8, user.getRoleName());
 			pstmt.setString(9, user.getUserStatus());
-			pstmt.setString(10, password1);
+			pstmt.setString(10, null);
 			pstmt.setLong(11, date.getTime());
 			pstmt.setLong(12, date.getTime());
-			
+
 			pstmt.executeUpdate();
 			return user;
 
 		} catch (Exception e) {
 			LOGGER.error("unable to  created :");
 			e.printStackTrace();
-			throw new UserModelDaoException("unable to create user"+e.getMessage());
-			
+			throw new UserModelDaoException("unable to create user" + e.getMessage());
+
 		} finally {
 			LOGGER.info("closing the connections");
 			InvestorDatabaseUtill.close(pstmt, connection);
 		}
-	
+
 	}
 
 	@Override
-	public UserEntity getUserById(String userid, String dataBaseName) throws UserModelDaoException
-	{
+	public UserEntity getUserById(String userid, String dataBaseName) throws UserModelDaoException {
 		Connection connection = null;
 		PreparedStatement pstmt = null;
 		ResultSet result = null;
@@ -91,8 +88,8 @@ public class UserDaoImpl implements UserDao
 			}
 		} catch (Exception e) {
 			LOGGER.error("User not found" + e.getMessage());
-			throw new UserModelDaoException("unable to get user by id"+e.getMessage());
-			
+			throw new UserModelDaoException("unable to get user by id" + e.getMessage());
+
 		} finally {
 			LOGGER.debug("closing the connections");
 			InvestorDatabaseUtill.close(result, pstmt, connection);
@@ -100,9 +97,8 @@ public class UserDaoImpl implements UserDao
 		return null;
 
 	}
-	
-	private UserEntity buildUser(ResultSet result) throws SQLException 
-	{
+
+	private UserEntity buildUser(ResultSet result) throws SQLException {
 		UserEntity user = new UserEntity();
 		user.setUserid(result.getString(UserQueryConstant.USERID));
 		user.setFirstName(result.getString(UserQueryConstant.FIRST_NAME));
@@ -116,11 +112,9 @@ public class UserDaoImpl implements UserDao
 		user.setPassword(result.getString(UserQueryConstant.PASSWORD));
 		user.setCreatedOn(result.getLong(UserQueryConstant.CREATEDON));
 		user.setEditedOn(result.getLong(UserQueryConstant.EDITEDON));
-	
+
 		return user;
 	}
-		
-	
 
 	@Override
 	public List<UserEntity> getAllUsers(String dataBaseName) throws UserModelDaoException {
@@ -141,22 +135,21 @@ public class UserDaoImpl implements UserDao
 		} catch (Exception e) {
 			LOGGER.error("unble to get list of user" + e.getMessage());
 			e.printStackTrace();
-			throw new UserModelDaoException("unable to get user list"+e.getMessage());
+			throw new UserModelDaoException("unable to get user list" + e.getMessage());
 
 		} finally {
 			LOGGER.debug("closing the connections");
 			InvestorDatabaseUtill.close(result, pstmt, connection);
 		}
-		
 
 	}
 
 	@Override
-	public UserEntity updateUser(UserEntity user, String userid, String dataBaseName)  throws UserModelDaoException{
+	public UserEntity updateUser(UserEntity user, String userid, String dataBaseName) throws UserModelDaoException {
 		Connection connection = null;
 		PreparedStatement pstmt = null;
-		LOGGER.info(".in update user database name is ::" + dataBaseName + " userId is ::" + userid + " request user is ::"
-				+ user);
+		LOGGER.info(".in update user database name is ::" + dataBaseName + " userId is ::" + userid
+				+ " request user is ::" + user);
 
 		try {
 
@@ -173,7 +166,7 @@ public class UserDaoImpl implements UserDao
 			pstmt.setString(7, user.getRoleName());
 			pstmt.setString(8, user.getUserStatus());
 			pstmt.setString(9, user.getPassword());
-			pstmt.setLong(10,date.getTime());
+			pstmt.setLong(10, date.getTime());
 			pstmt.setString(11, userid);
 
 			int executeUpdate = pstmt.executeUpdate();
@@ -183,8 +176,8 @@ public class UserDaoImpl implements UserDao
 			return user;
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new UserModelDaoException("unable to update" +e.getMessage());
-			
+			throw new UserModelDaoException("unable to update" + e.getMessage());
+
 		} finally {
 			LOGGER.debug("closing the connections");
 			InvestorDatabaseUtill.close(pstmt, connection);
@@ -192,10 +185,8 @@ public class UserDaoImpl implements UserDao
 
 	}
 
-	
-
 	@Override
-	public String deleteUser(String userid, String dataBaseName) throws UserModelDaoException{
+	public String deleteUser(String userid, String dataBaseName) throws UserModelDaoException {
 		Connection connection = null;
 		PreparedStatement pstmt = null;
 
@@ -208,7 +199,7 @@ public class UserDaoImpl implements UserDao
 			LOGGER.info(executeUpdate + " user deleted successfully");
 		} catch (Exception e) {
 			e.printStackTrace();
-		
+
 		} finally {
 			LOGGER.debug("closing the connections");
 			InvestorDatabaseUtill.close(pstmt, connection);
@@ -225,9 +216,9 @@ public class UserDaoImpl implements UserDao
 		ArrayList<UserEntity> listOfUsers = new ArrayList<>();
 		try {
 			connection = InvestorDatabaseUtill.getConnection();
-			pstmt = connection.prepareStatement(
-					UserQueryConstant.SELECT_USER_BY_ROLENAME.replace(UserQueryConstant.DATA_BASE_PLACE_HOLDER, dataBaseName));
-			pstmt.setString(1,roleName);
+			pstmt = connection.prepareStatement(UserQueryConstant.SELECT_USER_BY_ROLENAME
+					.replace(UserQueryConstant.DATA_BASE_PLACE_HOLDER, dataBaseName));
+			pstmt.setString(1, roleName);
 			result = pstmt.executeQuery();
 			while (result.next()) {
 				UserEntity user = buildUser(result);
@@ -246,6 +237,27 @@ public class UserDaoImpl implements UserDao
 
 	}
 
+	@Override
+	public UserEntity getUserByEmail(String email, String dataBaseName) throws UserModelDaoException {
+		Connection connection = null;
+		PreparedStatement pstmt = null;
+		ResultSet result = null;
+
+		try {
+			connection = InvestorDatabaseUtill.getConnection();
+			pstmt = connection.prepareStatement(UserQueryConstant.SELECT_USERDETAILS_BYEMAILID
+					.replace(UserQueryConstant.DATA_BASE_PLACE_HOLDER, dataBaseName));
+			pstmt.setString(1, email);
+			result = pstmt.executeQuery();
+			while (result.next()) {
+				UserEntity user = buildUser(result);
+				return user;
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+			throw new UserModelDaoException("unable to get user details by email id");
+		}
+		return null;
 	}
 
-   
+}

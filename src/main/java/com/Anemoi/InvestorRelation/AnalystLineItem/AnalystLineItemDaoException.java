@@ -1,7 +1,7 @@
 package com.Anemoi.InvestorRelation.AnalystLineItem;
 
 public class AnalystLineItemDaoException extends Exception {
-	private static final long serialVirsionUID=1L;
+	private static final long serialVirsionUID = 1L;
 
 	public AnalystLineItemDaoException() {
 		super();
@@ -28,6 +28,5 @@ public class AnalystLineItemDaoException extends Exception {
 		super(cause);
 		// TODO Auto-generated constructor stub
 	}
-	
 
 }

@@ -51,15 +51,15 @@ public class RoleMoldeDaoImpl implements RoleModelDao {
 			return rolemodel;
 
 		} catch (Exception e) {
-			LOGGER.error("unable to  created *******************:");		
-			throw new RoleModelDaoException("unable to  create role " +e.getMessage());
+			LOGGER.error("unable to  created *******************:");
+			throw new RoleModelDaoException("unable to  create role " + e.getMessage());
 		}
 
-		 finally {
+		finally {
 			LOGGER.info("closing the connections");
 			InvestorDatabaseUtill.close(pstmt, connection);
 		}
-		
+
 	}
 
 	@Override
@@ -80,7 +80,7 @@ public class RoleMoldeDaoImpl implements RoleModelDao {
 			}
 		} catch (Exception e) {
 			LOGGER.error("role model not found" + e.getMessage());
-			throw new RoleModelDaoException("unable to get role model by id"+e.getMessage());
+			throw new RoleModelDaoException("unable to get role model by id" + e.getMessage());
 
 		} finally {
 			LOGGER.debug("closing the connections");
@@ -109,7 +109,7 @@ public class RoleMoldeDaoImpl implements RoleModelDao {
 			}
 		} catch (Exception e) {
 			LOGGER.error("role model not found" + e.getMessage());
-			throw new RoleModelDaoException("unable to role model by rolename"+e.getMessage());
+			throw new RoleModelDaoException("unable to role model by rolename" + e.getMessage());
 
 		} finally {
 			LOGGER.debug("closing the connections");
@@ -118,14 +118,9 @@ public class RoleMoldeDaoImpl implements RoleModelDao {
 		return null;
 	}
 
-	
-
-	
-
 	@SuppressWarnings("resource")
 	@Override
-	public List<RoleModelEntity> getAllRoleModelDetails(String dataBaseName)
-			throws RoleModelDaoException {
+	public List<RoleModelEntity> getAllRoleModelDetails(String dataBaseName) throws RoleModelDaoException {
 		Connection connection = null;
 		PreparedStatement pstmt = null;
 		ResultSet result = null;
@@ -137,23 +132,22 @@ public class RoleMoldeDaoImpl implements RoleModelDao {
 			result = pstmt.executeQuery();
 			while (result.next()) {
 				RoleModelEntity shareholder = buildRoleModelDeatils(result);
-			  listofrolemodelDetails.add(shareholder);
+				listofrolemodelDetails.add(shareholder);
 			}
-			
+
 			return listofrolemodelDetails;
 		} catch (Exception e) {
 			LOGGER.error("unble to get list of role model" + e.getMessage());
 			e.printStackTrace();
-			throw new RoleModelDaoException("unable to get role model list"+e.getMessage());
+			throw new RoleModelDaoException("unable to get role model list" + e.getMessage());
 
 		} finally {
 			LOGGER.debug("closing the connections");
 			InvestorDatabaseUtill.close(result, pstmt, connection);
 		}
-		
-		 
-		
+
 	}
+
 	private RoleModelEntity buildRoleModelDeatils(ResultSet result) throws SQLException {
 
 		RoleModelEntity rolemodeEntity = new RoleModelEntity();
@@ -164,16 +158,15 @@ public class RoleMoldeDaoImpl implements RoleModelDao {
 		ArrayList<String> vta = new ArrayList<>();
 		vta.add(result.getString(RoleModelQuaryContant.DASHBOARDACCESS.toString()));
 		int size = vta.size();
-	  String access=result.getString(RoleModelQuaryContant.DASHBOARDACCESS.toString());
-	  
-	  
-	  String[] array=access.split(",");
-	 // System.out.println("*" +array.length);
+		String access = result.getString(RoleModelQuaryContant.DASHBOARDACCESS.toString());
+
+		String[] array = access.split(",");
+		// System.out.println("*" +array.length);
 		rolemodeEntity.setDashboardAccess(vta);
 		rolemodeEntity.setLastEdit(result.getLong(RoleModelQuaryContant.LASTEDIT));
 		rolemodeEntity.setCreatedOn(result.getLong(RoleModelQuaryContant.CREATEDON));
-	    rolemodeEntity.setNoOfUser(result.getString(8));
-	    rolemodeEntity.setAccessItem(array.length);
+		rolemodeEntity.setNoOfUser(result.getString(8));
+		rolemodeEntity.setAccessItem(array.length);
 
 		return rolemodeEntity;
 	}

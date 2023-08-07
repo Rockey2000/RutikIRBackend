@@ -1,8 +1,8 @@
 package com.Anemoi.InvestorRelation.BalanceSheet;
 
 public class BalanceSheetDaoException extends Exception {
-	
-	private static final long serialVersionUID=1L;
+
+	private static final long serialVersionUID = 1L;
 
 	public BalanceSheetDaoException() {
 		super();
@@ -29,7 +29,5 @@ public class BalanceSheetDaoException extends Exception {
 		super(cause);
 		// TODO Auto-generated constructor stub
 	}
-	
-	
 
 }

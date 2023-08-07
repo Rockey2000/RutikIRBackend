@@ -1,7 +1,7 @@
 package com.Anemoi.InvestorRelation.DataIngestion;
 
 public class DataIngestionDaoException extends Exception {
-	private static final long  SerialVertionUID=1L;
+	private static final long SerialVertionUID = 1L;
 
 	public DataIngestionDaoException() {
 		super();
@@ -28,7 +28,5 @@ public class DataIngestionDaoException extends Exception {
 		super(cause);
 		// TODO Auto-generated constructor stub
 	}
-	
 
-	
 }

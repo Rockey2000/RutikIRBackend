@@ -8,6 +8,7 @@ import org.json.simple.JSONObject;
 
 import com.Anemoi.InvestorRelation.Configuration.ReadPropertiesFile;
 
+import io.micronaut.http.multipart.CompletedFileUpload;
 import jakarta.inject.Inject;
 import jakarta.inject.Singleton;
 
@@ -17,10 +18,9 @@ public class AnalystLineItemServiceImpl implements AnalystLineItemService {
 	@Inject
 	private AnalystLineItemDao analystLineItemDao;
 
-//	private static final Object STATUS = "status";
-//	private static final Object SUCCESS = "success";
-//	private static final Object MSG = "msg";
-//	
+	private static final Object STATUS = "status";
+	private static final Object SUCCESS = "success";
+	private static final Object MSG = "msg";
 
 	private static String DATABASENAME = "databaseName";
 
@@ -35,7 +35,8 @@ public class AnalystLineItemServiceImpl implements AnalystLineItemService {
 	}
 
 	@Override
-	public AnalystLineItemEntity createAnalystLineItem(AnalystLineItemEntity analystlineItem) throws AnalystLineItemServiceException{
+	public AnalystLineItemEntity createAnalystLineItem(AnalystLineItemEntity analystlineItem)
+			throws AnalystLineItemServiceException {
 		// TODO Auto-generated method stub
 		try {
 			String dataBaseName = AnalystLineItemServiceImpl.dataBaseName();
@@ -48,9 +49,9 @@ public class AnalystLineItemServiceImpl implements AnalystLineItemService {
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
-			throw new AnalystLineItemServiceException("uuable to create analyst line item"+e.getMessage());
+			throw new AnalystLineItemServiceException(e.getMessage());
 		}
-		
+
 	}
 
 	private void applyValidation(AnalystLineItemEntity analystlineItem) throws Exception {
@@ -82,9 +83,9 @@ public class AnalystLineItemServiceImpl implements AnalystLineItemService {
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
-			throw new AnalystLineItemServiceException("unable to get analyst line item by id"+e.getMessage());
+			throw new AnalystLineItemServiceException("unable to get analyst line item by id" + e.getMessage());
 		}
-	
+
 	}
 
 	@SuppressWarnings("unchecked")
@@ -103,10 +104,9 @@ public class AnalystLineItemServiceImpl implements AnalystLineItemService {
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
-			throw new AnalystLineItemServiceException("unable to get anlayst line item "+e.getMessage());
+			throw new AnalystLineItemServiceException("unable to get anlayst line item " + e.getMessage());
 		}
-		
-	
+
 	}
 
 	@SuppressWarnings("unchecked")
@@ -136,7 +136,8 @@ public class AnalystLineItemServiceImpl implements AnalystLineItemService {
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public ArrayList<AnalystLineItemEntity> getbyAnalystName(String analystName, String masterTableSource)  throws AnalystLineItemServiceException{
+	public ArrayList<AnalystLineItemEntity> getbyAnalystName(String analystName, String masterTableSource)
+			throws AnalystLineItemServiceException {
 		// TODO Auto-generated method stub
 		try {
 			String dataBaseName = AnalystLineItemServiceImpl.dataBaseName();
@@ -150,27 +151,69 @@ public class AnalystLineItemServiceImpl implements AnalystLineItemService {
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
-			throw new AnalystLineItemServiceException("unbale to get analyst line item by analyst name and master table source"+e.getMessage());
+			throw new AnalystLineItemServiceException(
+					"unbale to get analyst line item by analyst name and master table source" + e.getMessage());
 		}
 
 	}
 
 	@Override
-	public String updateAnalystLineItem(String lineItemName,String analystName,
-			String analystLineItemName) throws AnalystLineItemServiceException {
+	public String updateAnalystLineItem(AnalystDetails analystDetails) throws AnalystLineItemServiceException {
 		try {
 			String dataBaseName = AnalystLineItemServiceImpl.dataBaseName();
-	
-			String  entity=this.analystLineItemDao.updateAnalystlineItem( lineItemName,analystName, analystLineItemName, dataBaseName);
-	      return entity;
-		}
-		catch (Exception e) {
+
+			String entity = this.analystLineItemDao.updateAnalystlineItem(analystDetails, dataBaseName);
+			return entity;
+		} catch (Exception e) {
 			// TODO: handle exception
-			throw new AnalystLineItemServiceException("unable to update analyst line item"+e.getMessage());
+			throw new AnalystLineItemServiceException(e.getMessage());
 		}
 	}
 
-	
+	@SuppressWarnings("unchecked")
+	@Override
+	public ArrayList<AnalystLineItemEntity> uploadAnalstLineItemExcelSheet(CompletedFileUpload file) throws AnalystLineItemServiceException {
+		// TODO Auto-generated method stub
+		try {
+			String dataBaseName = AnalystLineItemServiceImpl.dataBaseName();
+			ArrayList<AnalystLineItemEntity> list=this.analystLineItemDao.uploadAnalystLineItem(file, dataBaseName);
+			return list;
+		} catch (Exception e) {
+			// TODO: handle exception
+			throw new AnalystLineItemServiceException(e.getMessage());
+		}
+	}
 
-	
+	@Override
+	public ArrayList<AnalystLineItemEntity> addMultipleObject(ArrayList<AnalystLineItemEntity> analystLineItem)
+			throws AnalystLineItemServiceException {
+		try {
+			String dataBaseName = AnalystLineItemServiceImpl.dataBaseName();
+
+			// applyValidation(analystlineItem);
+
+			ArrayList<AnalystLineItemEntity> newcreateAnalystLineItem = this.analystLineItemDao
+					.addMultipleObject(analystLineItem, dataBaseName);
+			return newcreateAnalystLineItem;
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+			throw new AnalystLineItemServiceException(e.getMessage());
+		}
+	}
+
+	@Override
+	public AnalystLineItemEntity updateAnalystLineItem(AnalystLineItemEntity analystLineItem, String analystLineId)
+			throws AnalystLineItemServiceException {
+		try {
+			String dataBaseName = AnalystLineItemServiceImpl.dataBaseName();
+			AnalystLineItemEntity entity = this.analystLineItemDao.updateAnalystLineItem(analystLineItem, analystLineId,
+					dataBaseName);
+			return entity;
+		} catch (Exception e) {
+			// TODO: handle exception
+			throw new AnalystLineItemServiceException(e.getMessage());
+		}
+	}
+
 }

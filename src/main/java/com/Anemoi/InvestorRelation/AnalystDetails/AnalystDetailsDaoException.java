@@ -1,7 +1,9 @@
 package com.Anemoi.InvestorRelation.AnalystDetails;
 
-public class AnalystDetailsDaoException  extends Exception{
-	private static final long serialVirsionUID=1L;
+import com.Anemoi.InvestorRelation.GlobalExeption.GlobalException;
+
+public class AnalystDetailsDaoException extends Exception {
+	private static final long serialVirsionUID = 1L;
 
 	public AnalystDetailsDaoException() {
 		super();

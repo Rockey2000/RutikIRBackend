@@ -1,7 +1,5 @@
 package com.Anemoi.InvestorRelation.FinancialRatio;
 
-
-
 import java.util.List;
 
 import com.Anemoi.InvestorRelation.Configuration.ReadPropertiesFile;
@@ -19,90 +17,68 @@ import jakarta.inject.Inject;
 
 @Controller("/investor/financialratio")
 public class FinancialRatioController {
-	
+
 	@Inject
 	private FinancialRatioService service;
-	
-	@Post("/add")
-	  public HttpResponse<FinancialRatioEntity> addFinancialRatioDetails(@Body FinancialRatioEntity financialratioEntity) throws FinancialRatioControllerException
-	  {     try
-	         {
-			FinancialRatioEntity newfinancialratio=this.service.CreateFinancialRatio(financialratioEntity);
-			return HttpResponse.status(HttpStatus.OK).body(newfinancialratio);
-	          }
-	  catch (Exception e) {
-		// TODO: handle exception
-		  e.printStackTrace();
-		  throw new FinancialRatioControllerException(ReadPropertiesFile.readResponseProperty("403"), e,406,e.getMessage());
-	    
-	  }
-	
-	}
 
-		@Get("/{financialid}")
-		public HttpResponse<FinancialRatioEntity> getDataById(@PathVariable("financialid") String financialid) throws FinancialRatioControllerException
-		{
-			try
-			{
-				FinancialRatioEntity financialratioEntity=this.service.getFinancialRatioById(financialid);
-				return HttpResponse.status(HttpStatus.OK).body(financialratioEntity);
-			}
-			catch (Exception e) {
-				e.printStackTrace();
-				 throw new FinancialRatioControllerException(ReadPropertiesFile.readResponseProperty("101"), e,400,e.getMessage());
-			}
-			
-		}
-		
-		@Get("/list")
-		public List<FinancialRatioEntity> getDetails() throws FinancialRatioControllerException
-		{ try {
-			List<FinancialRatioEntity> cashflowData=this.service.getAllFinancialRatioDetails();
-			return cashflowData;
-		}
-		catch (Exception e) {
+	@Post("/add")
+	public HttpResponse<FinancialRatioEntity> addFinancialRatioDetails(@Body FinancialRatioEntity financialratioEntity)
+			throws FinancialRatioControllerException {
+		try {
+			FinancialRatioEntity newfinancialratio = this.service.CreateFinancialRatio(financialratioEntity);
+			return HttpResponse.status(HttpStatus.OK).body(newfinancialratio);
+		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
-			throw new FinancialRatioControllerException(ReadPropertiesFile.readResponseProperty("101"), e,400,e.getMessage());
+			throw new FinancialRatioControllerException(ReadPropertiesFile.readResponseProperty("403"), e, 406,
+					e.getMessage());
+
 		}
-		
+
+	}
+
+	@Get("/{financialid}")
+	public HttpResponse<FinancialRatioEntity> getDataById(@PathVariable("financialid") String financialid)
+			throws FinancialRatioControllerException {
+		try {
+			FinancialRatioEntity financialratioEntity = this.service.getFinancialRatioById(financialid);
+			return HttpResponse.status(HttpStatus.OK).body(financialratioEntity);
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new FinancialRatioControllerException(ReadPropertiesFile.readResponseProperty("101"), e, 400,
+					e.getMessage());
 		}
-		
-		@Patch("/{financialid}")
-		public HttpResponse<FinancialRatioEntity> updateUser(@Body FinancialRatioEntity financialratio,@PathVariable("financialid") String financialid) throws FinancialRatioControllerException
-		{
-			try
-			{
-			FinancialRatioEntity updatedfinancialratio=this.service.updateFinancialRatio(financialratio, financialid);
-			return HttpResponse.status(HttpStatus.OK).body(updatedfinancialratio);
-			}
-			catch (Exception e) {
-				// TODO: handle exception
-				e.printStackTrace();
-				throw new FinancialRatioControllerException(ReadPropertiesFile.readResponseProperty("403"), e,406,e.getMessage());
-				
-			}
-			
-			
+
+	}
+
+	@Get("/list")
+	public List<FinancialRatioEntity> getDetails() throws FinancialRatioControllerException {
+		try {
+			List<FinancialRatioEntity> cashflowData = this.service.getAllFinancialRatioDetails();
+			return cashflowData;
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+			throw new FinancialRatioControllerException(ReadPropertiesFile.readResponseProperty("101"), e, 400,
+					e.getMessage());
 		}
-		
-		@Delete("/{financialid}")
-		public HttpResponse<FinancialRatioEntity> deleteUser(@PathVariable("financialid") String financialid) throws FinancialRatioControllerException
-		{ 
-			try
-			{
-			FinancialRatioEntity response=this.service.deleteFinancialRatio(financialid);
+
+	}
+
+
+	@Delete("/{financialid}")
+	public HttpResponse<FinancialRatioEntity> deleteUser(@PathVariable("financialid") String financialid)
+			throws FinancialRatioControllerException {
+		try {
+			FinancialRatioEntity response = this.service.deleteFinancialRatio(financialid);
 			return HttpResponse.status(HttpStatus.OK).body(response);
-			}
-			catch (Exception e) {
-				// TODO: handle exception
-				e.printStackTrace();
-				throw new FinancialRatioControllerException(ReadPropertiesFile.readResponseProperty("101"), e,400,e.getMessage());
-			}
-			
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+			throw new FinancialRatioControllerException(ReadPropertiesFile.readResponseProperty("101"), e, 400,
+					e.getMessage());
 		}
 
-
-	
+	}
 
 }

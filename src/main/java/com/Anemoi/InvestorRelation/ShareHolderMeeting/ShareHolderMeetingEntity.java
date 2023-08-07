@@ -1,41 +1,77 @@
 package com.Anemoi.InvestorRelation.ShareHolderMeeting;
 
-public class ShareHolderMeetingEntity {
-	
-	private String holderid;
-	
-	private String date;
-	
-	private String startTime;
-	
-	private String endTime;
-	
-	private String organisation;
-	
-	private String stakeholderType;
-	
-	private String meetingType;
-	
-	private String subject;
-	
-	private String broker;
-	
-	private String location;
-	
-	private String status;
-	
-	private String comments;
-	
-	private String participants;
-	
-	private String feedback;
+import java.sql.Date;
 
-	public String getHolderid() {
-		return holderid;
+public class ShareHolderMeetingEntity {
+
+	private String shareholderid;
+	
+	private String meetingId;
+
+	private String date;
+
+	private String startTime;
+
+	private String endTime;
+
+	private String organisation;
+
+	private String stakeholderType;
+
+	private String meetingType;
+
+	private String subject;
+
+	private String broker;
+
+	private String location;
+
+	private String status;
+
+	private String comments;
+
+	private String participants;
+
+	private String feedback;
+	
+	private String summary;
+	
+	private String actionItem;
+	
+	private String investorConcerns;
+	
+	private String analysis;
+
+	private Long uploadedDate;
+	
+	private String uploadedBy;
+ 
+	private String mediakey;
+	
+	private String momfileName;
+	
+	private String momFileType;
+	
+	private byte[] momFileData;
+	
+	private String audioVedioFileStatus;
+	
+	private String momStatus;
+
+	public String getShareholderid() {
+		return shareholderid;
 	}
 
-	public void setHolderid(String holderid) {
-		this.holderid = holderid;
+	public void setShareholderid(String shareholderid) {
+		this.shareholderid = shareholderid;
+	}
+
+	public String getMeetingId() {
+		return meetingId;
+	}
+
+	public void setMeetingId(String meetingId) {
+		this.meetingId = meetingId;
 	}
 
 	public String getDate() {
@@ -142,20 +178,111 @@ public class ShareHolderMeetingEntity {
 		this.feedback = feedback;
 	}
 
-	@Override
-	public String toString() {
-		return "ShareHolderMeetingEntity [holderid=" + holderid + ", date=" + date + ", startTime=" + startTime
-				+ ", endTime=" + endTime + ", organisation=" + organisation + ", stakeholderType=" + stakeholderType
-				+ ", meetingType=" + meetingType + ", subject=" + subject + ", broker=" + broker + ", location="
-				+ location + ", status=" + status + ", comments=" + comments + ", participants=" + participants
-				+ ", feedback=" + feedback + "]";
+	public String getSummary() {
+		return summary;
 	}
 
-	public ShareHolderMeetingEntity(String holderid, String date, String startTime, String endTime, String organisation,
-			String stakeholderType, String meetingType, String subject, String broker, String location, String status,
-			String comments, String participants, String feedback) {
+	public void setSummary(String summary) {
+		this.summary = summary;
+	}
+
+	public String getActionItem() {
+		return actionItem;
+	}
+
+	public void setActionItem(String actionItem) {
+		this.actionItem = actionItem;
+	}
+
+	public String getInvestorConcerns() {
+		return investorConcerns;
+	}
+
+	public void setInvestorConcerns(String investorConcerns) {
+		this.investorConcerns = investorConcerns;
+	}
+
+	public String getAnalysis() {
+		return analysis;
+	}
+
+	public void setAnalysis(String analysis) {
+		this.analysis = analysis;
+	}
+
+	public Long getUploadedDate() {
+		return uploadedDate;
+	}
+
+	public void setUploadedDate(Long uploadedDate) {
+		this.uploadedDate = uploadedDate;
+	}
+
+	public String getUploadedBy() {
+		return uploadedBy;
+	}
+
+	public void setUploadedBy(String uploadedBy) {
+		this.uploadedBy = uploadedBy;
+	}
+
+	public String getMediakey() {
+		return mediakey;
+	}
+
+	public void setMediakey(String mediakey) {
+		this.mediakey = mediakey;
+	}
+
+	public String getMomfileName() {
+		return momfileName;
+	}
+
+	public void setMomfileName(String momfileName) {
+		this.momfileName = momfileName;
+	}
+
+	public String getMomFileType() {
+		return momFileType;
+	}
+
+	public void setMomFileType(String momFileType) {
+		this.momFileType = momFileType;
+	}
+
+	public byte[] getMomFileData() {
+		return momFileData;
+	}
+
+	public void setMomFileData(byte[] momFileData) {
+		this.momFileData = momFileData;
+	}
+
+	public String getAudioVedioFileStatus() {
+		return audioVedioFileStatus;
+	}
+
+	public void setAudioVedioFileStatus(String audioVedioFileStatus) {
+		this.audioVedioFileStatus = audioVedioFileStatus;
+	}
+
+	public String getMomStatus() {
+		return momStatus;
+	}
+
+	public void setMomStatus(String momStatus) {
+		this.momStatus = momStatus;
+	}
+
+	public ShareHolderMeetingEntity(String shareholderid, String meetingId, String date, String startTime,
+			String endTime, String organisation, String stakeholderType, String meetingType, String subject,
+			String broker, String location, String status, String comments, String participants, String feedback,
+			String summary, String actionItem, String investorConcerns, String analysis, Long uploadedDate,
+			String uploadedBy, String mediakey, String momfileName, String momFileType, byte[] momFileData,
+			String audioVedioFileStatus, String momStatus) {
 		super();
-		this.holderid = holderid;
+		this.shareholderid = shareholderid;
+		this.meetingId = meetingId;
 		this.date = date;
 		this.startTime = startTime;
 		this.endTime = endTime;
@@ -169,6 +296,18 @@ public class ShareHolderMeetingEntity {
 		this.comments = comments;
 		this.participants = participants;
 		this.feedback = feedback;
+		this.summary = summary;
+		this.actionItem = actionItem;
+		this.investorConcerns = investorConcerns;
+		this.analysis = analysis;
+		this.uploadedDate = uploadedDate;
+		this.uploadedBy = uploadedBy;
+		this.mediakey = mediakey;
+		this.momfileName = momfileName;
+		this.momFileType = momFileType;
+		this.momFileData = momFileData;
+		this.audioVedioFileStatus = audioVedioFileStatus;
+		this.momStatus = momStatus;
 	}
 
 	public ShareHolderMeetingEntity() {

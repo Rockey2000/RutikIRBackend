@@ -2,7 +2,7 @@ package com.Anemoi.InvestorRelation.AnalystDetails;
 
 public class AnalystDetailsServiceException extends Exception {
 
-	private static final long serialVirsionUID=1L;
+	private static final long serialVirsionUID = 1L;
 
 	public AnalystDetailsServiceException() {
 		super();
@@ -29,5 +29,5 @@ public class AnalystDetailsServiceException extends Exception {
 		super(cause);
 		// TODO Auto-generated constructor stub
 	}
-	
+
 }

@@ -8,11 +8,11 @@ import org.slf4j.LoggerFactory;
 
 public class PropertiesUtil {
 
-	
 	private static final Logger logger = LoggerFactory.getLogger(PropertiesUtil.class);
 
 	/**
 	 * Read the properties from the resources.
+	 * 
 	 * @param fileName the file to be read.
 	 * @return {@link Properties} containing all that properties contained.
 	 */
@@ -24,7 +24,7 @@ public class PropertiesUtil {
 			InputStream stream = PropertiesUtil.class.getClassLoader().getResourceAsStream(fileName);
 			properties.load(stream);
 		} catch (Exception e) {
-			logger.error("Exception is : "+e);
+			logger.error("Exception is : " + e);
 			logger.error("unable to load " + fileName + " file from resources");
 		}
 		return properties;

@@ -32,41 +32,45 @@ public class RoleModelController {
 			throws RoleModelControllerException {
 		try {
 			RoleModelEntity newrolemodel = this.service.createRoleModel(rolemodelEntity);
-			
+
 			return HttpResponse.status(HttpStatus.CREATED).body(newrolemodel);
-			
-		}
-		 catch (Exception e) {
-			
-			 throw new RoleModelControllerException(ReadPropertiesFile.readResponseProperty("403"),e,406,e.getMessage());
+
+		} catch (Exception e) {
+
+			throw new RoleModelControllerException(ReadPropertiesFile.readResponseProperty("403"), e, 406,
+					e.getMessage());
 //			 return HttpResponse.status(HttpStatus.NOT_FOUND);
 		}
-		
+
 	}
 
 	@Get("/{id}")
-	public HttpResponse<RoleModelEntity> getDataById(@PathVariable("id") String id) throws RoleModelControllerException {
+	public HttpResponse<RoleModelEntity> getDataById(@PathVariable("id") String id)
+			throws RoleModelControllerException {
 		try {
 			RoleModelEntity rolemodelEntity = this.service.getRoleModelById(id);
 			return HttpResponse.status(HttpStatus.OK).body(rolemodelEntity);
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new RoleModelControllerException(ReadPropertiesFile.readResponseProperty("101"), e,400,e.getMessage());
+			throw new RoleModelControllerException(ReadPropertiesFile.readResponseProperty("101"), e, 400,
+					e.getMessage());
 		}
-	
+
 	}
 
 	@Get("/getByRole/{role}")
-	public HttpResponse<RoleModelEntity> getDataByRole(@PathVariable("role") String role) throws RoleModelControllerException {
+	public HttpResponse<RoleModelEntity> getDataByRole(@PathVariable("role") String role)
+			throws RoleModelControllerException {
 		System.out.println(role + " !!!!!");
 		try {
 			RoleModelEntity rolemodelEntity = this.service.getRoleModelByRole(role);
 			return HttpResponse.status(HttpStatus.OK).body(rolemodelEntity);
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new RoleModelControllerException(ReadPropertiesFile.readResponseProperty("101"), e,400,e.getMessage());
+			throw new RoleModelControllerException(ReadPropertiesFile.readResponseProperty("101"), e, 400,
+					e.getMessage());
 		}
-	
+
 	}
 
 	@Get("/list")
@@ -77,37 +81,40 @@ public class RoleModelController {
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
-			throw new RoleModelControllerException(ReadPropertiesFile.readResponseProperty("101"), e,400,e.getMessage());
+			throw new RoleModelControllerException(ReadPropertiesFile.readResponseProperty("101"), e, 400,
+					e.getMessage());
 		}
-		
+
 	}
 
 	@Patch("/{id}")
-	public HttpResponse<RoleModelEntity> updateRoleModel(@Body RoleModelEntity rolemodelEntity, @PathVariable("id") String id)
-			throws RoleModelControllerException {
+	public HttpResponse<RoleModelEntity> updateRoleModel(@Body RoleModelEntity rolemodelEntity,
+			@PathVariable("id") String id) throws RoleModelControllerException {
 		try {
 			RoleModelEntity updatedrolemodel = this.service.updateRoleModel(rolemodelEntity, id);
 			return HttpResponse.status(HttpStatus.OK).body(updatedrolemodel);
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
-			throw new RoleModelControllerException(ReadPropertiesFile.readResponseProperty("101"), e,400,e.getMessage());
+			throw new RoleModelControllerException(ReadPropertiesFile.readResponseProperty("101"), e, 400,
+					e.getMessage());
 		}
-	
 
 	}
 
 	@Delete("/{id}")
-	public HttpResponse<RoleModelEntity> deleteRoleModelById(@PathVariable("id") String id) throws RoleModelControllerException {
+	public HttpResponse<RoleModelEntity> deleteRoleModelById(@PathVariable("id") String id)
+			throws RoleModelControllerException {
 		try {
 			RoleModelEntity response = this.service.deleteRolemodel(id);
 			return HttpResponse.status(HttpStatus.OK).body(response);
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
-			throw new RoleModelControllerException(ReadPropertiesFile.readResponseProperty("101"), e,400,e.getMessage());
+			throw new RoleModelControllerException(ReadPropertiesFile.readResponseProperty("101"), e, 400,
+					e.getMessage());
 		}
-		
+
 	}
 
 }

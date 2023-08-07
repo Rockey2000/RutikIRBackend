@@ -18,55 +18,55 @@ import com.Anemoi.InvestorRelation.ShareHolderDataFrom.ShareHolderDataFromQuaryC
 
 import jakarta.inject.Singleton;
 
-
 @Singleton
 public class ShareHolderContactDaoImpl implements ShareHolderContactDao {
-	
-	private static final Logger LOGGER =LoggerFactory.getLogger(ShareHolderContactDaoImpl.class);
+
+	private static final Logger LOGGER = LoggerFactory.getLogger(ShareHolderContactDaoImpl.class);
 
 	@Override
-	public ShareHolderContactEntity createNewShareHolderContact(ShareHolderContactEntity shareholdercontact, String dataBaseName) throws ShareHolderContactDaoException {
-		Connection connection=null;
-		PreparedStatement pstmt=null;
-		
-		try
-		{
-			connection=InvestorDatabaseUtill.getConnection();
+	public ShareHolderContactEntity createNewShareHolderContact(ShareHolderContactEntity shareholdercontact,
+			String dataBaseName) throws ShareHolderContactDaoException {
+		Connection connection = null;
+		PreparedStatement pstmt = null;
+
+		try {
+			connection = InvestorDatabaseUtill.getConnection();
 			LOGGER.debug("inserting the data");
-			
-			pstmt=connection.prepareStatement(ShareHolderContactQuaryConstant.INSERT_INTO_SHAREHOLDERCONTACT
-					.replace(ShareHolderContactQuaryConstant.DATA_BASE_PLACE_HOLDER,dataBaseName));
+
+			pstmt = connection.prepareStatement(ShareHolderContactQuaryConstant.INSERT_INTO_SHAREHOLDERCONTACT
+					.replace(ShareHolderContactQuaryConstant.DATA_BASE_PLACE_HOLDER, dataBaseName));
 			String contactid = UUID.randomUUID().toString();
-			
+
 			shareholdercontact.setContactid(contactid);
 			String id = shareholdercontact.getContactid();
-			System.out.println(id+" "+shareholdercontact);
+			System.out.println(id + " " + shareholdercontact);
 			pstmt.setString(1, contactid);
-		//	pstmt.setString(2, shareholdercontact.getContactid());
-			pstmt.setString(2, shareholdercontact.getName());
+			// pstmt.setString(2, shareholdercontact.getContactid());
+			pstmt.setString(2, shareholdercontact.getName().trim());
 			pstmt.setString(3, shareholdercontact.getPoc());
 			pstmt.setString(4, shareholdercontact.getEmail());
 			pstmt.setString(5, shareholdercontact.getMinorcode());
 			pstmt.setString(6, shareholdercontact.getAddress());
 			pstmt.setString(7, shareholdercontact.getContact());
-			
+
 			pstmt.executeUpdate();
 			return shareholdercontact;
 
 		} catch (Exception e) {
 			LOGGER.error("unable to  created :");
 			e.printStackTrace();
-			throw new ShareHolderContactDaoException("unable to create share holder "+e.getMessage());
-			
+			throw new ShareHolderContactDaoException("unable to create share holder " + e.getMessage());
+
 		} finally {
 			LOGGER.info("closing the connections");
 			InvestorDatabaseUtill.close(pstmt, connection);
 		}
-		
+
 	}
 
 	@Override
-	public ShareHolderContactEntity getShareHolderContactById(String contactid, String dataBaseName)  throws ShareHolderContactDaoException{
+	public ShareHolderContactEntity getShareHolderContactById(String contactid, String dataBaseName)
+			throws ShareHolderContactDaoException {
 		Connection connection = null;
 		PreparedStatement pstmt = null;
 		ResultSet result = null;
@@ -83,8 +83,8 @@ public class ShareHolderContactDaoImpl implements ShareHolderContactDao {
 			}
 		} catch (Exception e) {
 			LOGGER.error("share holder contact not found" + e.getMessage());
-			throw new ShareHolderContactDaoException("unable to get share holder by id"+e.getMessage());
-			
+			throw new ShareHolderContactDaoException("unable to get share holder by id" + e.getMessage());
+
 		} finally {
 			LOGGER.debug("closing the connections");
 			InvestorDatabaseUtill.close(result, pstmt, connection);
@@ -94,7 +94,6 @@ public class ShareHolderContactDaoImpl implements ShareHolderContactDao {
 
 	private ShareHolderContactEntity buildshareholdercontactDeatils(ResultSet result) throws SQLException {
 
-
 		ShareHolderContactEntity shareholdercontactEntity = new ShareHolderContactEntity();
 		shareholdercontactEntity.setContactid(result.getString(ShareHolderContactQuaryConstant.CONTACTID));
 		shareholdercontactEntity.setName(result.getString(ShareHolderContactQuaryConstant.NAME));
@@ -103,22 +102,21 @@ public class ShareHolderContactDaoImpl implements ShareHolderContactDao {
 		shareholdercontactEntity.setMinorcode(result.getString(ShareHolderContactQuaryConstant.MINORCODE));
 		shareholdercontactEntity.setAddress(result.getString(ShareHolderContactQuaryConstant.ADDRESS));
 		shareholdercontactEntity.setContact(result.getString(ShareHolderContactQuaryConstant.CONTACT));
-		
 
 		return shareholdercontactEntity;
 	}
 
-	
 	@Override
-	public List<ShareHolderContactEntity> getAllShareHolderContactDetails(String dataBaseName) throws SQLException ,ShareHolderContactDaoException {
+	public List<ShareHolderContactEntity> getAllShareHolderContactDetails(String dataBaseName)
+			throws SQLException, ShareHolderContactDaoException {
 		Connection connection = null;
 		PreparedStatement pstmt = null;
 		ResultSet result = null;
 		List<ShareHolderContactEntity> listofshareholderContactDetails = new ArrayList<>();
 		try {
 			connection = InvestorDatabaseUtill.getConnection();
-			pstmt = connection.prepareStatement(
-					ShareHolderContactQuaryConstant.SELECT_SHAREHOLDERCONTACT.replace(ShareHolderContactQuaryConstant.DATA_BASE_PLACE_HOLDER, dataBaseName));
+			pstmt = connection.prepareStatement(ShareHolderContactQuaryConstant.SELECT_SHAREHOLDERCONTACT
+					.replace(ShareHolderContactQuaryConstant.DATA_BASE_PLACE_HOLDER, dataBaseName));
 			result = pstmt.executeQuery();
 			while (result.next()) {
 				ShareHolderContactEntity shareholder = buildshareholdercontactDeatils(result);
@@ -128,28 +126,28 @@ public class ShareHolderContactDaoImpl implements ShareHolderContactDao {
 		} catch (Exception e) {
 			LOGGER.error("unble to get list of share holder contact" + e.getMessage());
 			e.printStackTrace();
-			throw new ShareHolderContactDaoException("unable to get share holder list"+e.getMessage());
+			throw new ShareHolderContactDaoException("unable to get share holder list" + e.getMessage());
 
 		} finally {
 			LOGGER.debug("closing the connections");
 			InvestorDatabaseUtill.close(result, pstmt, connection);
 		}
-		
+
 	}
 
 	@Override
 	public ShareHolderContactEntity updateShareHolderContactDetails(ShareHolderContactEntity shareholdercontact,
-			String contactid, String dataBaseName) throws ShareHolderContactDaoException{
+			String contactid, String dataBaseName) throws ShareHolderContactDaoException {
 		Connection connection = null;
 		PreparedStatement pstmt = null;
-		LOGGER.info(".in update shareholder contact database name is ::" + dataBaseName + " cashId is ::" + contactid + " request cash flow is ::"
-				+ shareholdercontact);
+		LOGGER.info(".in update shareholder contact database name is ::" + dataBaseName + " cashId is ::" + contactid
+				+ " request cash flow is ::" + shareholdercontact);
 
 		try {
 
 			connection = InvestorDatabaseUtill.getConnection();
-			pstmt = connection.prepareStatement(
-					ShareHolderContactQuaryConstant.UPDATE_SHAREHOLDERCONTACT.replace(ShareHolderContactQuaryConstant.DATA_BASE_PLACE_HOLDER, dataBaseName));
+			pstmt = connection.prepareStatement(ShareHolderContactQuaryConstant.UPDATE_SHAREHOLDERCONTACT
+					.replace(ShareHolderContactQuaryConstant.DATA_BASE_PLACE_HOLDER, dataBaseName));
 			Date date = new Date();
 			pstmt.setString(1, shareholdercontact.getName());
 			pstmt.setString(2, shareholdercontact.getPoc());
@@ -157,8 +155,7 @@ public class ShareHolderContactDaoImpl implements ShareHolderContactDao {
 			pstmt.setString(4, shareholdercontact.getMinorcode());
 			pstmt.setString(5, shareholdercontact.getAddress());
 			pstmt.setString(6, shareholdercontact.getContact());
-			
-			
+
 			pstmt.setString(7, contactid);
 
 			int executeUpdate = pstmt.executeUpdate();
@@ -167,9 +164,8 @@ public class ShareHolderContactDaoImpl implements ShareHolderContactDao {
 			LOGGER.info(executeUpdate + " shareholder Contact updated successfully");
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new ShareHolderContactDaoException("unable to update share holder list"+e.getMessage());
-			
-			
+			throw new ShareHolderContactDaoException("unable to update share holder list" + e.getMessage());
+
 		} finally {
 			LOGGER.debug("closing the connections");
 			InvestorDatabaseUtill.close(pstmt, connection);
@@ -191,7 +187,7 @@ public class ShareHolderContactDaoImpl implements ShareHolderContactDao {
 			LOGGER.info(executeUpdate + " shareholder contact deleted successfully");
 		} catch (Exception e) {
 			e.printStackTrace();
-		
+
 		} finally {
 			LOGGER.debug("closing the connections");
 			InvestorDatabaseUtill.close(pstmt, connection);

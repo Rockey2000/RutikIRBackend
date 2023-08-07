@@ -1,8 +1,8 @@
 package com.Anemoi.InvestorRelation.RoleModel;
 
-public class RoleModelDaoException  extends Exception{
-	
-	private static final long SerialVersionUID=1L;
+public class RoleModelDaoException extends Exception {
+
+	private static final long SerialVersionUID = 1L;
 
 	public RoleModelDaoException() {
 		super();
@@ -33,7 +33,5 @@ public class RoleModelDaoException  extends Exception{
 	public RoleModelDaoException(String readResponseProperty, Exception e, int i, String message) {
 		// TODO Auto-generated constructor stub
 	}
-	
-	
 
 }

@@ -15,20 +15,18 @@ import org.slf4j.LoggerFactory;
 
 import com.Anemoi.InvestorRelation.Configuration.ReadPropertiesFile;
 
-
 import jakarta.inject.Singleton;
 
 @Singleton
-public class MailServiceImpl  implements MailService{
-	
+public class MailServiceImpl implements MailService {
+
 	private static final Logger logger = LoggerFactory.getLogger(MailServiceImpl.class);
 
 	@Override
 	public void sendFirstTimeRegistrationMailToUser(Transport transport, String email, String firstName,
-			String roleName,String password) {
-		
-		logger.debug(
-				"inside sendFirstTimeRegistrationMailToUser(4 arg) method :recipientEmail is :: " + email);
+			String roleName, String password) {
+
+		logger.debug("inside sendFirstTimeRegistrationMailToUser(4 arg) method :recipientEmail is :: " + email);
 		logger.debug("cheking thread name " + Thread.currentThread().getName() + "id" + Thread.currentThread().getId());
 		Session session = MailSessionInstance.getMailSession();
 
@@ -61,11 +59,9 @@ public class MailServiceImpl  implements MailService{
 		} catch (AddressException e) {
 			e.printStackTrace();
 		} catch (MessagingException e) {
-		
+
 			e.printStackTrace();
 		}
 	}
-		
-	}
 
-
+}

@@ -1,14 +1,14 @@
 package com.Anemoi.InvestorRelation.CashFlow;
 
 public class CashFlowEntity {
-	
+
 	private String cashId;
-	
+
 	private String lineItem;
-	
+
 	private String alternativeName;
-	
-	private String  type;
+
+	private String type;
 
 	public String getCashId() {
 		return cashId;
@@ -53,7 +53,5 @@ public class CashFlowEntity {
 	public CashFlowEntity() {
 		super();
 	}
-
-	
 
 }

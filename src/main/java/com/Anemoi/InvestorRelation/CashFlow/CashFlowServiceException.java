@@ -1,10 +1,9 @@
 package com.Anemoi.InvestorRelation.CashFlow;
 
 public class CashFlowServiceException extends Exception {
-   
-	
+
 	@SuppressWarnings("unused")
-	private static final long SerialVertionUID=1L;
+	private static final long SerialVertionUID = 1L;
 
 	public CashFlowServiceException() {
 		super();
@@ -31,5 +30,5 @@ public class CashFlowServiceException extends Exception {
 		super(cause);
 		// TODO Auto-generated constructor stub
 	}
-	
+
 }

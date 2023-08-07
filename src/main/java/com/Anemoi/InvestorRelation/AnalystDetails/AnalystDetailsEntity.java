@@ -1,22 +1,25 @@
 package com.Anemoi.InvestorRelation.AnalystDetails;
 
-public class AnalystDetailsEntity {
-	
-	private String analystId;
-	
-	private String analystName;
-	
-	private String pocName;
-	
-	private String pocEmailId;
-	
-	private long createdOn;
+import java.util.ArrayList;
+import java.util.List;
 
-	public String getAnalystId() {
+public class AnalystDetailsEntity {
+
+	private long analystId;
+
+	private String analystName;
+
+   private List<AnalystContactDetails> analystContactDetails;
+   
+	private long createdOn;
+	
+	private long modifiedOn;
+
+	public long getAnalystId() {
 		return analystId;
 	}
 
-	public void setAnalystId(String analystId) {
+	public void setAnalystId(long analystId) {
 		this.analystId = analystId;
 	}
 
@@ -28,20 +31,12 @@ public class AnalystDetailsEntity {
 		this.analystName = analystName;
 	}
 
-	public String getPocName() {
-		return pocName;
+	public List<AnalystContactDetails> getAnalystContactDetails() {
+		return analystContactDetails;
 	}
 
-	public void setPocName(String pocName) {
-		this.pocName = pocName;
-	}
-
-	public String getPocEmailId() {
-		return pocEmailId;
-	}
-
-	public void setPocEmailId(String pocEmailId) {
-		this.pocEmailId = pocEmailId;
+	public void setAnalystContactDetails(List<AnalystContactDetails> analystContactDetails) {
+		this.analystContactDetails = analystContactDetails;
 	}
 
 	public long getCreatedOn() {
@@ -52,14 +47,22 @@ public class AnalystDetailsEntity {
 		this.createdOn = createdOn;
 	}
 
-	public AnalystDetailsEntity(String analystId, String analystName, String pocName, String pocEmailId,
-			long createdOn) {
+	public long getModifiedOn() {
+		return modifiedOn;
+	}
+
+	public void setModifiedOn(long modifiedOn) {
+		this.modifiedOn = modifiedOn;
+	}
+
+	public AnalystDetailsEntity(long analystId, String analystName, List<AnalystContactDetails> analystContactDetails,
+			long createdOn, long modifiedOn) {
 		super();
 		this.analystId = analystId;
 		this.analystName = analystName;
-		this.pocName = pocName;
-		this.pocEmailId = pocEmailId;
+		this.analystContactDetails = analystContactDetails;
 		this.createdOn = createdOn;
+		this.modifiedOn = modifiedOn;
 	}
 
 	public AnalystDetailsEntity() {

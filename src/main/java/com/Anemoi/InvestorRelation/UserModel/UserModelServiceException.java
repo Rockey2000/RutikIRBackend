@@ -1,8 +1,8 @@
 package com.Anemoi.InvestorRelation.UserModel;
 
-public class UserModelServiceException  extends Exception{
-	
-	private static final long SerialVertionUID=1L;
+public class UserModelServiceException extends Exception {
+
+	private static final long SerialVertionUID = 1L;
 
 	public UserModelServiceException() {
 		super();
@@ -29,5 +29,5 @@ public class UserModelServiceException  extends Exception{
 		super(cause);
 		// TODO Auto-generated constructor stub
 	}
-  
+
 }

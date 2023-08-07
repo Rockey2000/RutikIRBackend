@@ -1,8 +1,10 @@
 package com.Anemoi.InvestorRelation.DataIngestion;
 
-public class DataIngestionServiceException  extends Exception{
+import io.micronaut.http.HttpResponse;
 
-	private static final long  SerialVertionUID=1L;
+public class DataIngestionServiceException extends Exception {
+
+	private static final long SerialVertionUID = 1L;
 
 	public DataIngestionServiceException() {
 		super();
@@ -29,5 +31,9 @@ public class DataIngestionServiceException  extends Exception{
 		super(cause);
 		// TODO Auto-generated constructor stub
 	}
-	
+
+	public DataIngestionServiceException(String string, HttpResponse<?> errorResponse) {
+		// TODO Auto-generated constructor stub
+	}
+
 }

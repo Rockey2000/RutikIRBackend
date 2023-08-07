@@ -1,23 +1,27 @@
 package com.Anemoi.InvestorRelation.ShareHolderDataFrom;
 
 public class ShareHolderDataFromEntity {
-	
+
 	private String shareId;
-	
-	private String clientId;
-	
+
+	private String clientName;
+
 	private String portfolioId;
-	
+
 	private String folio;
-	
+
 	private String shareholderName;
-	
+
 	private String holdingValue;
-	
+
 	private String holdingPercentage;
 	
+	private String holdingCost;
+
 	private String minorCode;
 	
+	private String fundGroup;
+
 	private String date;
 
 	public String getShareId() {
@@ -28,12 +32,12 @@ public class ShareHolderDataFromEntity {
 		this.shareId = shareId;
 	}
 
-	public String getClientId() {
-		return clientId;
+	public String getClientName() {
+		return clientName;
 	}
 
-	public void setClientId(String clientId) {
-		this.clientId = clientId;
+	public void setClientName(String clientName) {
+		this.clientName = clientName;
 	}
 
 	public String getPortfolioId() {
@@ -76,12 +80,28 @@ public class ShareHolderDataFromEntity {
 		this.holdingPercentage = holdingPercentage;
 	}
 
+	public String getHoldingCost() {
+		return holdingCost;
+	}
+
+	public void setHoldingCost(String holdingCost) {
+		this.holdingCost = holdingCost;
+	}
+
 	public String getMinorCode() {
 		return minorCode;
 	}
 
 	public void setMinorCode(String minorCode) {
 		this.minorCode = minorCode;
+	}
+
+	public String getFundGroup() {
+		return fundGroup;
+	}
+
+	public void setFundGroup(String fundGroup) {
+		this.fundGroup = fundGroup;
 	}
 
 	public String getDate() {
@@ -92,17 +112,20 @@ public class ShareHolderDataFromEntity {
 		this.date = date;
 	}
 
-	public ShareHolderDataFromEntity(String shareId, String clientId, String portfolioId, String folio,
-			String shareholderName, String holdingValue, String holdingPercentage, String minorCode, String date) {
+	public ShareHolderDataFromEntity(String shareId, String clientName, String portfolioId, String folio,
+			String shareholderName, String holdingValue, String holdingPercentage, String holdingCost, String minorCode,
+			String fundGroup, String date) {
 		super();
 		this.shareId = shareId;
-		this.clientId = clientId;
+		this.clientName = clientName;
 		this.portfolioId = portfolioId;
 		this.folio = folio;
 		this.shareholderName = shareholderName;
 		this.holdingValue = holdingValue;
 		this.holdingPercentage = holdingPercentage;
+		this.holdingCost = holdingCost;
 		this.minorCode = minorCode;
+		this.fundGroup = fundGroup;
 		this.date = date;
 	}
 
@@ -110,5 +133,6 @@ public class ShareHolderDataFromEntity {
 		super();
 	}
 	
+	
 
-	}
+}
